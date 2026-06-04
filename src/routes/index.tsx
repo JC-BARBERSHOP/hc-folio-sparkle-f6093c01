@@ -1,23 +1,40 @@
 import { createFileRoute } from "@tanstack/react-router";
-import heroImage from "@/assets/hero-documents.jpg";
+import heroImage from "@/assets/hero-consultant.jpg";
+import hcLogo from "@/assets/hc-logo.jpeg.asset.json";
 import { Button } from "@/components/ui/button";
 import {
   FileText, Building2, Landmark, Receipt, Briefcase, ShieldCheck,
   FileSignature, Users, IdCard, BookUser, HeartPulse, ScrollText,
-  Phone, Mail, MapPin, Clock, Check, ArrowRight,
+  Phone, Mail, MapPin, Clock, Check, ArrowRight, Star,
 } from "lucide-react";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "HC Services Financial | Tax Preparation, Business Compliance & Immigration Services" },
-      { name: "description", content: "HC Services Financial provides tax preparation, IRS tax filing, business compliance, corporation setup, sales tax filing, immigration document preparation, and Obamacare health insurance enrollment services." },
-      { property: "og:title", content: "HC Services Financial | Tax Preparation, Business Compliance & Immigration Services" },
-      { property: "og:description", content: "Professional tax preparation, IRS filing, business compliance, immigration document preparation, and Obamacare enrollment." },
+      { title: "HC Services Financial | Tax Preparation, IRS Filing & Immigration Services" },
+      { name: "description", content: "Professional tax preparation, IRS tax filing, personal & business taxes, LLC formation, immigration document preparation, green card assistance, and health insurance enrollment. Call (646) 620-2960." },
+      { name: "keywords", content: "tax preparation, IRS tax filing, personal taxes, business taxes, corporate taxes, immigration services, green card assistance, family petitions, business compliance, LLC formation, health insurance enrollment, Obamacare" },
+      { property: "og:title", content: "HC Services Financial | Tax Preparation, IRS Filing & Immigration Services" },
+      { property: "og:description", content: "Professional tax preparation, IRS filing, business compliance, immigration document preparation, and Obamacare enrollment. Call (646) 620-2960." },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/" },
+      { property: "og:image", content: hcLogo.url },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: "/" }],
+    scripts: [{
+      type: "application/ld+json",
+      children: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        name: "HC Services Financial",
+        image: hcLogo.url,
+        telephone: "+1-646-620-2960",
+        description: "Tax preparation, IRS tax filing, business compliance, immigration document preparation, and health insurance enrollment.",
+        areaServed: "United States",
+        serviceType: ["Tax Preparation", "IRS Tax Filing", "Business Compliance", "Immigration Document Preparation", "Health Insurance Enrollment"],
+      }),
+    }],
   }),
   component: Index,
 });
