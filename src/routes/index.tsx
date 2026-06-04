@@ -110,8 +110,8 @@ function Index() {
                 <a href="#contact" className="inline-flex h-12 items-center justify-center rounded-md bg-foreground px-6 text-sm font-medium text-background transition-opacity hover:opacity-90">
                   Schedule a Consultation <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
-                <a href="#services" className="inline-flex h-12 items-center justify-center rounded-md border border-foreground/15 bg-transparent px-6 text-sm font-medium text-foreground transition-colors hover:bg-foreground/5">
-                  View Services
+                <a href={`tel:${PHONE_TEL}`} className="inline-flex h-12 items-center justify-center rounded-md border border-foreground/15 bg-transparent px-6 text-sm font-medium text-foreground transition-colors hover:bg-foreground/5">
+                  <Phone className="mr-2 h-4 w-4 text-[var(--gold-deep)]" /> Call {PHONE_DISPLAY}
                 </a>
               </div>
               <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-3 text-sm text-muted-foreground">
