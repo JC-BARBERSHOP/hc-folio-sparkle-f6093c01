@@ -1,11 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import heroImage from "@/assets/hero-consultant.jpg";
 import hcLogo from "@/assets/hc-logo.jpeg.asset.json";
-import { Button } from "@/components/ui/button";
 import {
   FileText, Building2, Landmark, Receipt, Briefcase, ShieldCheck,
   FileSignature, Users, IdCard, BookUser, HeartPulse, ScrollText,
-  Phone, Mail, MapPin, Clock, Check, ArrowRight, Star,
+  Phone, Mail, MapPin, Clock, Check, ArrowRight,
 } from "lucide-react";
 
 export const Route = createFileRoute("/")({
