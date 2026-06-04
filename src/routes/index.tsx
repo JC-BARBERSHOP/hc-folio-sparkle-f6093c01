@@ -71,8 +71,8 @@ function Index() {
       {/* Header */}
       <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-md">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-          <a href="#top" className="flex items-center gap-2">
-            <span className="flex h-9 w-9 items-center justify-center rounded-md bg-foreground text-[oklch(0.72_0.13_80)] font-serif text-lg font-bold tracking-tight">HC</span>
+          <a href="#top" className="flex items-center gap-2.5">
+            <img src={hcLogo.url} alt="HC Services Financial logo" width={40} height={40} className="h-10 w-10 rounded-full object-cover ring-1 ring-foreground/10" />
             <span className="hidden text-sm font-semibold tracking-wide sm:block">HC Services Financial</span>
           </a>
           <nav className="hidden items-center gap-8 md:flex">
@@ -80,9 +80,14 @@ function Index() {
               <a key={n.href} href={n.href} className="text-sm text-muted-foreground transition-colors hover:text-foreground">{n.label}</a>
             ))}
           </nav>
-          <a href="#contact" className="inline-flex h-9 items-center justify-center rounded-md bg-foreground px-4 text-sm font-medium text-background transition-opacity hover:opacity-90">
-            Schedule Consultation
-          </a>
+          <div className="flex items-center gap-2">
+            <a href={`tel:${PHONE_TEL}`} className="hidden items-center gap-2 rounded-md border border-foreground/15 px-3 py-2 text-sm font-medium transition-colors hover:bg-foreground/5 sm:inline-flex">
+              <Phone className="h-4 w-4 text-[var(--gold-deep)]" /> {PHONE_DISPLAY}
+            </a>
+            <a href="#contact" className="inline-flex h-9 items-center justify-center rounded-md bg-foreground px-4 text-sm font-medium text-background transition-opacity hover:opacity-90">
+              Schedule
+            </a>
+          </div>
         </div>
       </header>
 
