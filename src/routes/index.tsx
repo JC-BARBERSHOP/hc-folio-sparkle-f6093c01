@@ -304,7 +304,7 @@ function Index() {
                 <a href={`tel:${PHONE_TEL}`} className="inline-flex h-12 items-center justify-center rounded-md bg-foreground px-6 text-sm font-medium text-background transition-opacity hover:opacity-90">
                   <Phone className="mr-2 h-4 w-4" /> Call {PHONE_DISPLAY}
                 </a>
-                <a href="mailto:" className="inline-flex h-12 items-center justify-center rounded-md border border-foreground/15 px-6 text-sm font-medium transition-colors hover:bg-foreground/5">
+                <a href="mailto:hcservicesfinancial@gmail.com" className="inline-flex h-12 items-center justify-center rounded-md border border-foreground/15 px-6 text-sm font-medium transition-colors hover:bg-foreground/5">
                   <Mail className="mr-2 h-4 w-4" /> Send Message
                 </a>
               </div>
@@ -312,7 +312,7 @@ function Index() {
             <div className="grid gap-4 sm:grid-cols-2">
               {[
                 { icon: Phone, label: "Phone", value: PHONE_DISPLAY },
-                { icon: Mail, label: "Email", value: "[Add email]" },
+                { icon: Mail, label: "Email", value: "hcservicesfinancial@gmail.com" },
                 { icon: MapPin, label: "Location", value: "[Add city/state]" },
                 { icon: Clock, label: "Business Hours", value: "[Add hours]" },
               ].map(({ icon: Icon, label, value }) => (
