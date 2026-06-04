@@ -286,6 +286,9 @@ function Index() {
             <a href="#contact" className="mt-10 inline-flex h-12 items-center justify-center rounded-md bg-foreground px-8 text-sm font-medium text-background transition-opacity hover:opacity-90">
               Contact Us Today <ArrowRight className="ml-2 h-4 w-4" />
             </a>
+            <a href={`tel:${PHONE_TEL}`} className="mt-3 ml-3 inline-flex h-12 items-center justify-center rounded-md border border-foreground/15 px-8 text-sm font-medium transition-colors hover:bg-foreground/5">
+              <Phone className="mr-2 h-4 w-4 text-[var(--gold-deep)]" /> Call {PHONE_DISPLAY}
+            </a>
           </div>
         </section>
 
@@ -299,8 +302,8 @@ function Index() {
                 Reach out to schedule a consultation. We'll walk you through the next steps with no pressure.
               </p>
               <div className="mt-10 flex flex-wrap gap-3">
-                <a href="tel:" className="inline-flex h-12 items-center justify-center rounded-md bg-foreground px-6 text-sm font-medium text-background transition-opacity hover:opacity-90">
-                  <Phone className="mr-2 h-4 w-4" /> Call Now
+                <a href={`tel:${PHONE_TEL}`} className="inline-flex h-12 items-center justify-center rounded-md bg-foreground px-6 text-sm font-medium text-background transition-opacity hover:opacity-90">
+                  <Phone className="mr-2 h-4 w-4" /> Call {PHONE_DISPLAY}
                 </a>
                 <a href="mailto:" className="inline-flex h-12 items-center justify-center rounded-md border border-foreground/15 px-6 text-sm font-medium transition-colors hover:bg-foreground/5">
                   <Mail className="mr-2 h-4 w-4" /> Send Message
@@ -309,7 +312,7 @@ function Index() {
             </div>
             <div className="grid gap-4 sm:grid-cols-2">
               {[
-                { icon: Phone, label: "Phone", value: "[Add phone number]" },
+                { icon: Phone, label: "Phone", value: PHONE_DISPLAY },
                 { icon: Mail, label: "Email", value: "[Add email]" },
                 { icon: MapPin, label: "Location", value: "[Add city/state]" },
                 { icon: Clock, label: "Business Hours", value: "[Add hours]" },
