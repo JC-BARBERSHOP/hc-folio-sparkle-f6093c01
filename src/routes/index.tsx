@@ -66,7 +66,7 @@ const nav = [
 
 function Index() {
   return (
-    <div className="min-h-screen bg-background text-foreground antialiased scroll-smooth">
+    <div className="min-h-screen bg-background text-foreground antialiased scroll-smooth pb-20 md:pb-0">
       {/* Header */}
       <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-md">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
