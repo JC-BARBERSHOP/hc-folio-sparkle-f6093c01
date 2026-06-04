@@ -39,6 +39,9 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
+const PHONE_DISPLAY = "(646) 620-2960";
+const PHONE_TEL = "+16466202960";
+
 const services = [
   { icon: FileText, title: "Personal Tax Preparation", desc: "Accurate income tax preparation for individuals and families." },
   { icon: Building2, title: "Business & Corporation Tax Filing", desc: "Corporation tax filing and business tax services done right." },
