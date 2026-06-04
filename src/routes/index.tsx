@@ -249,19 +249,25 @@ function Index() {
           <div className="mx-auto max-w-6xl px-6 py-20 lg:py-28">
             <div className="mx-auto max-w-2xl text-center">
               <p className="mb-4 text-xs uppercase tracking-[0.2em] text-[var(--gold-deep)]">Why Choose Us</p>
-              <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">Built on care, accuracy, and clarity</h2>
+              <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">Why Choose HC Services Financial</h2>
+              <p className="mt-4 text-muted-foreground">Trusted, personalized service for taxes, business, immigration, and health insurance.</p>
             </div>
-            <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="mx-auto mt-14 grid max-w-4xl gap-4 sm:grid-cols-2">
               {[
-                { n: "01", t: "Professional & organized", d: "Every filing handled with attention to detail." },
-                { n: "02", t: "For families & businesses", d: "Personal, family, and business support under one roof." },
-                { n: "03", t: "Tax & compliance focused", d: "Specialists in IRS filing and business compliance." },
-                { n: "04", t: "Bilingual-friendly", d: "Simple, clear explanations in plain language." },
-              ].map((i) => (
-                <div key={i.n} className="border-t border-foreground/15 pt-6">
-                  <p className="font-serif text-sm italic text-[var(--gold-deep)]">{i.n}</p>
-                  <h3 className="mt-3 text-base font-semibold">{i.t}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{i.d}</p>
+                "Experienced Tax Professionals",
+                "Personal & Business Tax Experts",
+                "Immigration Document Assistance",
+                "Business Compliance Support",
+                "Health Insurance Enrollment Assistance",
+                "Personalized One-on-One Service",
+                "Fast & Reliable Support",
+                "Bilingual-friendly Communication",
+              ].map((t) => (
+                <div key={t} className="flex items-start gap-3 rounded-xl border border-border bg-background p-5">
+                  <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[var(--gold)]/15 text-[var(--gold-deep)]">
+                    <Check className="h-3.5 w-3.5" />
+                  </span>
+                  <span className="text-sm font-medium">{t}</span>
                 </div>
               ))}
             </div>
