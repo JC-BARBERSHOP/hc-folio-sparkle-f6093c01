@@ -135,7 +135,7 @@ function Index() {
         {/* About */}
         <section id="about" className="border-t border-border/60 bg-card">
           <div className="mx-auto max-w-4xl px-6 py-20 text-center lg:py-28">
-            <p className="mb-4 text-xs uppercase tracking-[0.2em] text-[var(--gold-deep)]">About</p>
+            <p className="mb-4 uppercase tracking-[0.2em] text-base">About</p>
             <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
               Trusted Guidance for Taxes, Business & Family Documents
             </h2>
@@ -149,7 +149,7 @@ function Index() {
         <section id="services" className="border-t border-border/60">
           <div className="mx-auto max-w-6xl px-6 py-20 lg:py-28">
             <div className="mx-auto max-w-2xl text-center">
-              <p className="mb-4 text-xs uppercase tracking-[0.2em] text-[var(--gold-deep)]">Services</p>
+              <p className="mb-4 uppercase tracking-[0.2em] text-base">Services</p>
               <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">Everything you need, in one place</h2>
               <p className="mt-4 text-muted-foreground">From tax return preparation to immigration document preparation and health insurance enrollment.</p>
             </div>
@@ -171,7 +171,7 @@ function Index() {
         <section id="taxes" className="border-t border-border/60 bg-card">
           <div className="mx-auto grid max-w-6xl gap-12 px-6 py-20 lg:grid-cols-5 lg:py-28">
             <div className="lg:col-span-2">
-              <p className="mb-4 text-xs uppercase tracking-[0.2em] text-[var(--gold-deep)]">Primary Focus</p>
+              <p className="mb-4 uppercase tracking-[0.2em] text-base">Primary Focus</p>
               <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">Tax Preparation & IRS Filing Services</h2>
             </div>
             <div className="lg:col-span-3">
@@ -197,7 +197,7 @@ function Index() {
         <section id="business" className="border-t border-border/60">
           <div className="mx-auto grid max-w-6xl gap-12 px-6 py-20 lg:grid-cols-2 lg:py-28">
             <div>
-              <p className="mb-4 text-xs uppercase tracking-[0.2em] text-[var(--gold-deep)]">Business</p>
+              <p className="mb-4 uppercase tracking-[0.2em] text-base">Business</p>
               <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">Business Setup & Compliance Support</h2>
               <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
                 From opening a corporation to filing monthly sales tax with the state, HC Services Financial helps business owners manage the important steps required to keep their business active and compliant.
@@ -214,7 +214,7 @@ function Index() {
         {/* Immigration */}
         <section id="immigration" className="border-t border-border/60 bg-card">
           <div className="mx-auto max-w-4xl px-6 py-20 lg:py-28">
-            <p className="mb-4 text-xs uppercase tracking-[0.2em] text-[var(--gold-deep)]">Immigration</p>
+            <p className="mb-4 uppercase tracking-[0.2em] text-base">Immigration</p>
             <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">Immigration Document Preparation</h2>
             <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
               HC Services Financial assists with immigration-related document preparation, including asylum applications, green card applications, passport assistance, and family petitions.
@@ -235,7 +235,7 @@ function Index() {
         {/* Health */}
         <section id="health" className="border-t border-border/60">
           <div className="mx-auto max-w-4xl px-6 py-20 text-center lg:py-28">
-            <p className="mb-4 text-xs uppercase tracking-[0.2em] text-[var(--gold-deep)]">Health Insurance</p>
+            <p className="mb-4 uppercase tracking-[0.2em] text-base">Health Insurance</p>
             <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">Obamacare & Health Insurance Enrollment</h2>
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
               Get assistance understanding and applying for health insurance options through Obamacare and marketplace health insurance plans.
@@ -247,7 +247,7 @@ function Index() {
         <section className="border-t border-border/60 bg-card">
           <div className="mx-auto max-w-6xl px-6 py-20 lg:py-28">
             <div className="mx-auto max-w-2xl text-center">
-              <p className="mb-4 text-xs uppercase tracking-[0.2em] text-[var(--gold-deep)]">Why Choose Us</p>
+              <p className="mb-4 uppercase tracking-[0.2em] text-base">Why Choose Us</p>
               <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">Why Choose HC Services Financial</h2>
               <p className="mt-4 text-muted-foreground">Trusted, personalized service for taxes, business, immigration, and health insurance.</p>
             </div>
