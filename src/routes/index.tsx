@@ -331,10 +331,23 @@ function Index() {
 
       <footer className="border-t border-border/60">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 py-8 text-xs text-muted-foreground sm:flex-row">
-          <p>© {new Date().getFullYear()} HC Services Financial. All rights reserved.</p>
+          <div className="flex items-center gap-2">
+            <img src={hcLogo.url} alt="" width={20} height={20} className="h-5 w-5 rounded-full" />
+            <p>© {new Date().getFullYear()} HC Services Financial. All rights reserved.</p>
+          </div>
           <p>Tax preparation · Business compliance · Immigration documents · Health insurance</p>
         </div>
       </footer>
+
+      {/* Sticky mobile call button */}
+      <a
+        href={`tel:${PHONE_TEL}`}
+        className="fixed bottom-4 left-4 right-4 z-50 flex h-14 items-center justify-center gap-2 rounded-full bg-foreground text-background shadow-lg shadow-foreground/20 transition-opacity hover:opacity-90 md:hidden"
+        aria-label={`Call ${PHONE_DISPLAY}`}
+      >
+        <Phone className="h-5 w-5 text-[var(--gold)]" />
+        <span className="text-sm font-semibold">Call {PHONE_DISPLAY}</span>
+      </a>
     </div>
   );
 }
