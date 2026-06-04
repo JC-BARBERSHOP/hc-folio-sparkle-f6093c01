@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import heroImage from "@/assets/hero-documents.jpg";
-import { Button } from "@/components/ui/button";
+import heroImage from "@/assets/hero-consultant.jpg";
+import hcLogo from "@/assets/hc-logo.jpeg.asset.json";
 import {
   FileText, Building2, Landmark, Receipt, Briefcase, ShieldCheck,
   FileSignature, Users, IdCard, BookUser, HeartPulse, ScrollText,
@@ -10,17 +10,36 @@ import {
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "HC Services Financial | Tax Preparation, Business Compliance & Immigration Services" },
-      { name: "description", content: "HC Services Financial provides tax preparation, IRS tax filing, business compliance, corporation setup, sales tax filing, immigration document preparation, and Obamacare health insurance enrollment services." },
-      { property: "og:title", content: "HC Services Financial | Tax Preparation, Business Compliance & Immigration Services" },
-      { property: "og:description", content: "Professional tax preparation, IRS filing, business compliance, immigration document preparation, and Obamacare enrollment." },
+      { title: "HC Services Financial | Tax Preparation, IRS Filing & Immigration Services" },
+      { name: "description", content: "Professional tax preparation, IRS tax filing, personal & business taxes, LLC formation, immigration document preparation, green card assistance, and health insurance enrollment. Call (646) 620-2960." },
+      { name: "keywords", content: "tax preparation, IRS tax filing, personal taxes, business taxes, corporate taxes, immigration services, green card assistance, family petitions, business compliance, LLC formation, health insurance enrollment, Obamacare" },
+      { property: "og:title", content: "HC Services Financial | Tax Preparation, IRS Filing & Immigration Services" },
+      { property: "og:description", content: "Professional tax preparation, IRS filing, business compliance, immigration document preparation, and Obamacare enrollment. Call (646) 620-2960." },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/" },
+      { property: "og:image", content: hcLogo.url },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: "/" }],
+    scripts: [{
+      type: "application/ld+json",
+      children: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        name: "HC Services Financial",
+        image: hcLogo.url,
+        telephone: "+1-646-620-2960",
+        description: "Tax preparation, IRS tax filing, business compliance, immigration document preparation, and health insurance enrollment.",
+        areaServed: "United States",
+        serviceType: ["Tax Preparation", "IRS Tax Filing", "Business Compliance", "Immigration Document Preparation", "Health Insurance Enrollment"],
+      }),
+    }],
   }),
   component: Index,
 });
+
+const PHONE_DISPLAY = "(646) 620-2960";
+const PHONE_TEL = "+16466202960";
 
 const services = [
   { icon: FileText, title: "Personal Tax Preparation", desc: "Accurate income tax preparation for individuals and families." },
@@ -47,12 +66,12 @@ const nav = [
 
 function Index() {
   return (
-    <div className="min-h-screen bg-background text-foreground antialiased scroll-smooth">
+    <div className="min-h-screen bg-background text-foreground antialiased scroll-smooth pb-20 md:pb-0">
       {/* Header */}
       <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-md">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-          <a href="#top" className="flex items-center gap-2">
-            <span className="flex h-9 w-9 items-center justify-center rounded-md bg-foreground text-[oklch(0.72_0.13_80)] font-serif text-lg font-bold tracking-tight">HC</span>
+          <a href="#top" className="flex items-center gap-2.5">
+            <img src={hcLogo.url} alt="HC Services Financial logo" width={40} height={40} className="h-10 w-10 rounded-full object-cover ring-1 ring-foreground/10" />
             <span className="hidden text-sm font-semibold tracking-wide sm:block">HC Services Financial</span>
           </a>
           <nav className="hidden items-center gap-8 md:flex">
@@ -60,9 +79,14 @@ function Index() {
               <a key={n.href} href={n.href} className="text-sm text-muted-foreground transition-colors hover:text-foreground">{n.label}</a>
             ))}
           </nav>
-          <a href="#contact" className="inline-flex h-9 items-center justify-center rounded-md bg-foreground px-4 text-sm font-medium text-background transition-opacity hover:opacity-90">
-            Schedule Consultation
-          </a>
+          <div className="flex items-center gap-2">
+            <a href={`tel:${PHONE_TEL}`} className="hidden items-center gap-2 rounded-md border border-foreground/15 px-3 py-2 text-sm font-medium transition-colors hover:bg-foreground/5 sm:inline-flex">
+              <Phone className="h-4 w-4 text-[var(--gold-deep)]" /> {PHONE_DISPLAY}
+            </a>
+            <a href="#contact" className="inline-flex h-9 items-center justify-center rounded-md bg-foreground px-4 text-sm font-medium text-background transition-opacity hover:opacity-90">
+              Schedule
+            </a>
+          </div>
         </div>
       </header>
 
@@ -85,8 +109,8 @@ function Index() {
                 <a href="#contact" className="inline-flex h-12 items-center justify-center rounded-md bg-foreground px-6 text-sm font-medium text-background transition-opacity hover:opacity-90">
                   Schedule a Consultation <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
-                <a href="#services" className="inline-flex h-12 items-center justify-center rounded-md border border-foreground/15 bg-transparent px-6 text-sm font-medium text-foreground transition-colors hover:bg-foreground/5">
-                  View Services
+                <a href={`tel:${PHONE_TEL}`} className="inline-flex h-12 items-center justify-center rounded-md border border-foreground/15 bg-transparent px-6 text-sm font-medium text-foreground transition-colors hover:bg-foreground/5">
+                  <Phone className="mr-2 h-4 w-4 text-[var(--gold-deep)]" /> Call {PHONE_DISPLAY}
                 </a>
               </div>
               <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-3 text-sm text-muted-foreground">
@@ -224,19 +248,25 @@ function Index() {
           <div className="mx-auto max-w-6xl px-6 py-20 lg:py-28">
             <div className="mx-auto max-w-2xl text-center">
               <p className="mb-4 text-xs uppercase tracking-[0.2em] text-[var(--gold-deep)]">Why Choose Us</p>
-              <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">Built on care, accuracy, and clarity</h2>
+              <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">Why Choose HC Services Financial</h2>
+              <p className="mt-4 text-muted-foreground">Trusted, personalized service for taxes, business, immigration, and health insurance.</p>
             </div>
-            <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="mx-auto mt-14 grid max-w-4xl gap-4 sm:grid-cols-2">
               {[
-                { n: "01", t: "Professional & organized", d: "Every filing handled with attention to detail." },
-                { n: "02", t: "For families & businesses", d: "Personal, family, and business support under one roof." },
-                { n: "03", t: "Tax & compliance focused", d: "Specialists in IRS filing and business compliance." },
-                { n: "04", t: "Bilingual-friendly", d: "Simple, clear explanations in plain language." },
-              ].map((i) => (
-                <div key={i.n} className="border-t border-foreground/15 pt-6">
-                  <p className="font-serif text-sm italic text-[var(--gold-deep)]">{i.n}</p>
-                  <h3 className="mt-3 text-base font-semibold">{i.t}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{i.d}</p>
+                "Experienced Tax Professionals",
+                "Personal & Business Tax Experts",
+                "Immigration Document Assistance",
+                "Business Compliance Support",
+                "Health Insurance Enrollment Assistance",
+                "Personalized One-on-One Service",
+                "Fast & Reliable Support",
+                "Bilingual-friendly Communication",
+              ].map((t) => (
+                <div key={t} className="flex items-start gap-3 rounded-xl border border-border bg-background p-5">
+                  <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[var(--gold)]/15 text-[var(--gold-deep)]">
+                    <Check className="h-3.5 w-3.5" />
+                  </span>
+                  <span className="text-sm font-medium">{t}</span>
                 </div>
               ))}
             </div>
@@ -255,6 +285,9 @@ function Index() {
             <a href="#contact" className="mt-10 inline-flex h-12 items-center justify-center rounded-md bg-foreground px-8 text-sm font-medium text-background transition-opacity hover:opacity-90">
               Contact Us Today <ArrowRight className="ml-2 h-4 w-4" />
             </a>
+            <a href={`tel:${PHONE_TEL}`} className="mt-3 ml-3 inline-flex h-12 items-center justify-center rounded-md border border-foreground/15 px-8 text-sm font-medium transition-colors hover:bg-foreground/5">
+              <Phone className="mr-2 h-4 w-4 text-[var(--gold-deep)]" /> Call {PHONE_DISPLAY}
+            </a>
           </div>
         </section>
 
@@ -268,8 +301,8 @@ function Index() {
                 Reach out to schedule a consultation. We'll walk you through the next steps with no pressure.
               </p>
               <div className="mt-10 flex flex-wrap gap-3">
-                <a href="tel:" className="inline-flex h-12 items-center justify-center rounded-md bg-foreground px-6 text-sm font-medium text-background transition-opacity hover:opacity-90">
-                  <Phone className="mr-2 h-4 w-4" /> Call Now
+                <a href={`tel:${PHONE_TEL}`} className="inline-flex h-12 items-center justify-center rounded-md bg-foreground px-6 text-sm font-medium text-background transition-opacity hover:opacity-90">
+                  <Phone className="mr-2 h-4 w-4" /> Call {PHONE_DISPLAY}
                 </a>
                 <a href="mailto:" className="inline-flex h-12 items-center justify-center rounded-md border border-foreground/15 px-6 text-sm font-medium transition-colors hover:bg-foreground/5">
                   <Mail className="mr-2 h-4 w-4" /> Send Message
@@ -278,7 +311,7 @@ function Index() {
             </div>
             <div className="grid gap-4 sm:grid-cols-2">
               {[
-                { icon: Phone, label: "Phone", value: "[Add phone number]" },
+                { icon: Phone, label: "Phone", value: PHONE_DISPLAY },
                 { icon: Mail, label: "Email", value: "[Add email]" },
                 { icon: MapPin, label: "Location", value: "[Add city/state]" },
                 { icon: Clock, label: "Business Hours", value: "[Add hours]" },
@@ -297,10 +330,23 @@ function Index() {
 
       <footer className="border-t border-border/60">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 py-8 text-xs text-muted-foreground sm:flex-row">
-          <p>© {new Date().getFullYear()} HC Services Financial. All rights reserved.</p>
+          <div className="flex items-center gap-2">
+            <img src={hcLogo.url} alt="" width={20} height={20} className="h-5 w-5 rounded-full" />
+            <p>© {new Date().getFullYear()} HC Services Financial. All rights reserved.</p>
+          </div>
           <p>Tax preparation · Business compliance · Immigration documents · Health insurance</p>
         </div>
       </footer>
+
+      {/* Sticky mobile call button */}
+      <a
+        href={`tel:${PHONE_TEL}`}
+        className="fixed bottom-4 left-4 right-4 z-50 flex h-14 items-center justify-center gap-2 rounded-full bg-foreground text-background shadow-lg shadow-foreground/20 transition-opacity hover:opacity-90 md:hidden"
+        aria-label={`Call ${PHONE_DISPLAY}`}
+      >
+        <Phone className="h-5 w-5 text-[var(--gold)]" />
+        <span className="text-sm font-semibold">Call {PHONE_DISPLAY}</span>
+      </a>
     </div>
   );
 }
