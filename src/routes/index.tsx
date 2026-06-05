@@ -136,180 +136,107 @@ function Index() {
           </div>
         </section>
 
-        {/* Services */}
-        <section id="services" className="border-t border-border/60">
-          <div className="mx-auto max-w-6xl px-6 py-20 lg:py-28">
-            <div className="mx-auto max-w-2xl text-center">
-              <p className="mb-4 uppercase tracking-[0.2em] text-base">Services</p>
-              <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">Everything you need, in one place</h2>
-              <p className="mt-4 text-muted-foreground">From tax return preparation to immigration document preparation and health insurance enrollment.</p>
+        {/* Tax Services */}
+        <section id="taxes" className="border-t border-border/60">
+          <div className="mx-auto max-w-3xl px-6 py-24 text-center lg:py-36">
+            <p className="mb-4 uppercase tracking-[0.2em] text-base text-[var(--gold-deep)]">Tax Services</p>
+            <div className="mx-auto mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-foreground/5 text-[var(--gold-deep)]">
+              <FileText className="h-5 w-5" />
             </div>
-            <div className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
-              {services.map(({ icon: Icon, title, desc }) => (
-                <div key={title} className="group bg-card p-7 transition-colors hover:bg-secondary">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-foreground/5 text-[var(--gold-deep)] transition-colors group-hover:bg-foreground group-hover:text-[var(--gold)]">
-                    <Icon className="h-5 w-5" />
-                  </div>
-                  <h3 className="mt-5 text-base font-semibold">{title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Main Tax */}
-        <section id="taxes" className="border-t border-border/60 bg-card">
-          <div className="mx-auto grid max-w-6xl gap-12 px-6 py-20 lg:grid-cols-5 lg:py-28">
-            <div className="lg:col-span-2">
-              <p className="mb-4 uppercase tracking-[0.2em] text-base">Primary Focus</p>
-              <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">Tax Preparation & IRS Filing Services</h2>
-            </div>
-            <div className="lg:col-span-3">
-              <p className="text-lg leading-relaxed text-muted-foreground">
-                Whether you need help filing personal taxes, business taxes, corporation taxes, or IRS forms, HC Services Financial provides professional tax preparation services designed to help you stay organized, accurate, and compliant.
-              </p>
-              <ul className="mt-8 grid gap-3 sm:grid-cols-2">
-                {["Personal tax filing","Business tax filing","IRS tax filing","Corporation tax filing","Income tax preparation","Tax return preparation","Tax filing assistance","Tax help & planning"].map((t) => (
-                  <li key={t} className="flex items-center gap-3 text-sm">
-                    <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[var(--gold)]/15 text-[var(--gold-deep)]"><Check className="h-3 w-3" /></span>
-                    {t}
-                  </li>
-                ))}
-              </ul>
-              <a href="#contact" className="mt-10 inline-flex items-center text-sm font-medium text-foreground underline-offset-4 hover:underline">
-                Talk to a tax specialist <ArrowRight className="ml-1 h-4 w-4" />
-              </a>
-            </div>
-          </div>
-        </section>
-
-        {/* Business */}
-        <section id="business" className="border-t border-border/60">
-          <div className="mx-auto grid max-w-6xl gap-12 px-6 py-20 lg:grid-cols-2 lg:py-28">
-            <div>
-              <p className="mb-4 uppercase tracking-[0.2em] text-base">Business</p>
-              <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">Business Setup & Compliance Support</h2>
-              <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-                From opening a corporation to filing monthly sales tax with the state, HC Services Financial helps business owners manage the important steps required to keep their business active and compliant.
-              </p>
-            </div>
-            <div className="grid gap-3 sm:grid-cols-2">
-              {["Corporation setup","Business registration","Sales tax filing","Monthly tax filing","Business compliance","State tax filing","Business tax services","Ongoing support"].map((t) => (
-                <div key={t} className="rounded-lg border border-border bg-card px-4 py-3 text-sm">{t}</div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Immigration */}
-        <section id="immigration" className="border-t border-border/60 bg-card">
-          <div className="mx-auto max-w-4xl px-6 py-20 lg:py-28">
-            <p className="mb-4 uppercase tracking-[0.2em] text-base">Immigration</p>
-            <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">Immigration Document Preparation</h2>
-            <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-              HC Services Financial assists with immigration-related document preparation, including asylum applications, green card applications, passport assistance, and family petitions.
+            <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">Tax Preparation & IRS Filing</h2>
+            <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
+              Personal, business, and corporation tax filing handled with care. We help you stay organized, accurate, and compliant — from income tax returns to IRS correspondence and monthly sales tax filing.
             </p>
-            <div className="mt-8 grid gap-3 sm:grid-cols-2">
-              {["Asylum applications","Green card applications","Passport assistance","Family petitions"].map((t) => (
-                <div key={t} className="flex items-center gap-3 rounded-lg border border-border bg-background px-4 py-3 text-sm">
-                  <Check className="h-4 w-4 text-[var(--gold-deep)]" />{t}
-                </div>
-              ))}
+          </div>
+        </section>
+
+        {/* Business Services */}
+        <section id="business" className="border-t border-border/60 bg-card">
+          <div className="mx-auto max-w-3xl px-6 py-24 text-center lg:py-36">
+            <p className="mb-4 uppercase tracking-[0.2em] text-base text-[var(--gold-deep)]">Business Services</p>
+            <div className="mx-auto mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-foreground/5 text-[var(--gold-deep)]">
+              <Briefcase className="h-5 w-5" />
             </div>
-            <p className="mt-8 rounded-md border-l-2 border-[var(--gold)] bg-background px-4 py-3 text-xs italic text-muted-foreground">
+            <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">Business Setup & Compliance</h2>
+            <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
+              From opening your corporation or LLC to ongoing compliance support, we guide business owners through the steps required to stay active, registered, and audit-ready.
+            </p>
+          </div>
+        </section>
+
+        {/* Immigration Services */}
+        <section id="immigration" className="border-t border-border/60">
+          <div className="mx-auto max-w-3xl px-6 py-24 text-center lg:py-36">
+            <p className="mb-4 uppercase tracking-[0.2em] text-base text-[var(--gold-deep)]">Immigration Services</p>
+            <div className="mx-auto mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-foreground/5 text-[var(--gold-deep)]">
+              <FileSignature className="h-5 w-5" />
+            </div>
+            <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">Immigration Document Preparation</h2>
+            <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
+              Careful preparation of green card applications, asylum applications, family petitions, and passport paperwork.
+            </p>
+            <p className="mx-auto mt-8 max-w-md text-xs italic text-muted-foreground">
               HC Services Financial provides document preparation assistance and is not a law firm.
             </p>
           </div>
         </section>
 
-        {/* Health */}
-        <section id="health" className="border-t border-border/60">
-          <div className="mx-auto max-w-4xl px-6 py-20 text-center lg:py-28">
-            <p className="mb-4 uppercase tracking-[0.2em] text-base">Health Insurance</p>
-            <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">Obamacare & Health Insurance Enrollment</h2>
-            <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-              Get assistance understanding and applying for health insurance options through Obamacare and marketplace health insurance plans.
+        {/* Health Insurance */}
+        <section id="health" className="border-t border-border/60 bg-card">
+          <div className="mx-auto max-w-3xl px-6 py-24 text-center lg:py-36">
+            <p className="mb-4 uppercase tracking-[0.2em] text-base text-[var(--gold-deep)]">Health Insurance</p>
+            <div className="mx-auto mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-foreground/5 text-[var(--gold-deep)]">
+              <HeartPulse className="h-5 w-5" />
+            </div>
+            <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">Health Insurance Assistance</h2>
+            <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
+              Enrollment support for Obamacare and marketplace health insurance plans, with clear guidance on the right coverage for you and your family.
             </p>
           </div>
         </section>
 
         {/* Why Choose Us */}
-        <section className="border-t border-border/60 bg-card">
-          <div className="mx-auto max-w-6xl px-6 py-20 lg:py-28">
-            <div className="mx-auto max-w-2xl text-center">
-              <p className="mb-4 uppercase tracking-[0.2em] text-base">Why Choose Us</p>
-              <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">Why Choose HC Services Financial</h2>
-              <p className="mt-4 text-muted-foreground">Trusted, personalized service for taxes, business, immigration, and health insurance.</p>
-            </div>
-            <div className="mx-auto mt-14 grid max-w-4xl gap-4 sm:grid-cols-2">
-              {[
-                "Experienced Tax Professionals",
-                "Personal & Business Tax Experts",
-                "Immigration Document Assistance",
-                "Business Compliance Support",
-                "Health Insurance Enrollment Assistance",
-                "Personalized One-on-One Service",
-                "Fast & Reliable Support",
-                "Bilingual-friendly Communication",
-              ].map((t) => (
-                <div key={t} className="flex items-start gap-3 rounded-xl border border-border bg-background p-5">
-                  <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[var(--gold)]/15 text-[var(--gold-deep)]">
-                    <Check className="h-3.5 w-3.5" />
-                  </span>
-                  <span className="text-sm font-medium">{t}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA */}
         <section className="border-t border-border/60">
-          <div className="mx-auto max-w-5xl px-6 py-20 text-center lg:py-28">
-            <h2 className="mx-auto max-w-3xl text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl">
-              Need Help Filing Taxes or Organizing Your Business Documents?
-            </h2>
-            <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
-              Contact HC Services Financial today for professional support with taxes, business compliance, immigration paperwork, or health insurance enrollment.
-            </p>
-            <div className="mt-10 flex flex-wrap justify-center gap-3">
-              <a href={`tel:${PHONE_TEL}`} className="inline-flex h-12 items-center justify-center rounded-md bg-foreground px-8 text-sm font-medium text-background transition-opacity hover:opacity-90">
-                <Phone className="mr-2 h-4 w-4" /> Call {PHONE_DISPLAY}
-              </a>
-              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="inline-flex h-12 items-center justify-center rounded-md border border-foreground/15 px-8 text-sm font-medium transition-colors hover:bg-foreground/5">
-                <MessageCircle className="mr-2 h-3.5 w-3.5 text-[#25D366]" /> WhatsApp {PHONE_DISPLAY}
-              </a>
-            </div>
+          <div className="mx-auto max-w-3xl px-6 py-24 text-center lg:py-36">
+            <p className="mb-4 uppercase tracking-[0.2em] text-base text-[var(--gold-deep)]">Why Choose Us</p>
+            <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">Trusted, personal, and bilingual</h2>
+            <ul className="mx-auto mt-10 grid max-w-xl gap-4 text-left sm:grid-cols-2">
+              {whyChoose.map((t) => (
+                <li key={t} className="flex items-start gap-3 text-sm">
+                  <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[var(--gold)]/15 text-[var(--gold-deep)]">
+                    <Check className="h-3 w-3" />
+                  </span>
+                  <span>{t}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         </section>
 
         {/* Contact */}
         <section id="contact" className="border-t border-border/60 bg-card">
-          <div className="mx-auto grid max-w-6xl gap-12 px-6 py-20 lg:grid-cols-2 lg:py-28">
-            <div>
-              <p className="mb-4 text-xs uppercase tracking-[0.2em] text-[var(--gold-deep)]">Contact</p>
-              <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">Let's get your paperwork in order</h2>
-              <p className="mt-6 max-w-md text-muted-foreground">
-                Reach out by phone or WhatsApp. We'll walk you through the next steps with no pressure.
-              </p>
-              <div className="mt-10 flex flex-wrap gap-3">
-                <a href={`tel:${PHONE_TEL}`} className="inline-flex h-12 items-center justify-center rounded-md bg-foreground px-6 text-sm font-medium text-background transition-opacity hover:opacity-90">
-                  <Phone className="mr-2 h-4 w-4" /> Call {PHONE_DISPLAY}
-                </a>
-                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="inline-flex h-12 items-center justify-center rounded-md border border-foreground/15 px-6 text-sm font-medium transition-colors hover:bg-foreground/5">
-                  <MessageCircle className="mr-2 h-3.5 w-3.5 text-[#25D366]" /> WhatsApp
-                </a>
-              </div>
+          <div className="mx-auto max-w-3xl px-6 py-24 text-center lg:py-36">
+            <p className="mb-4 uppercase tracking-[0.2em] text-base text-[var(--gold-deep)]">Contact</p>
+            <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">Let's get your paperwork in order</h2>
+            <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
+              Reach out by phone or WhatsApp. We'll walk you through the next steps with no pressure.
+            </p>
+            <div className="mt-10 flex flex-wrap justify-center gap-3">
+              <a href={`tel:${PHONE_TEL}`} className="inline-flex h-12 items-center justify-center rounded-md bg-foreground px-6 text-sm font-medium text-background transition-opacity hover:opacity-90">
+                <Phone className="mr-2 h-4 w-4" /> Call {PHONE_DISPLAY}
+              </a>
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="inline-flex h-12 items-center justify-center rounded-md border border-foreground/15 px-6 text-sm font-medium transition-colors hover:bg-foreground/5">
+                <MessageCircle className="mr-2 h-3.5 w-3.5 text-[#25D366]" /> WhatsApp
+              </a>
             </div>
-            <div className="grid gap-4 sm:grid-cols-2">
+            <div className="mx-auto mt-14 grid max-w-2xl gap-4 sm:grid-cols-2">
               {[
                 { icon: Phone, label: "Phone", value: PHONE_DISPLAY },
                 { icon: Mail, label: "Email", value: "hcservicesfinancial@gmail.com" },
                 { icon: MapPin, label: "Location", value: "[Add city/state]" },
-                { icon: Clock, label: "Business Hours", value: "[Add hours]" },
+                { icon: Clock, label: "Hours", value: "[Add hours]" },
               ].map(({ icon: Icon, label, value }) => (
-                <div key={label} className="rounded-xl border border-border bg-background p-5">
+                <div key={label} className="rounded-xl border border-border bg-background p-5 text-left">
                   <div className="flex items-center gap-2 text-xs uppercase tracking-widest text-muted-foreground">
                     <Icon className="h-3.5 w-3.5 text-[var(--gold-deep)]" /> {label}
                   </div>
