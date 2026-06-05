@@ -94,33 +94,31 @@ function Index() {
       <main id="top">
         {/* Hero */}
         <section className="relative overflow-hidden">
-          <div className="mx-auto grid max-w-6xl gap-12 px-6 py-20 lg:grid-cols-2 lg:items-center lg:py-28">
-            <div>
-              <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-card px-3 py-1 text-xs uppercase tracking-widest text-muted-foreground">
-                <span className="h-1.5 w-1.5 rounded-full bg-[var(--gold)]" />
-                Trusted financial & filing services
-              </div>
-              <h1 className="text-4xl font-semibold leading-[1.1] tracking-tight sm:text-5xl lg:text-6xl">
-                Professional Tax Preparation, Business Compliance & <span className="italic text-[var(--gold-deep)] font-serif">Immigration Services</span>
-              </h1>
-              <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
-                HC Services Financial helps individuals, families, and business owners file taxes, stay compliant, and handle important financial and immigration paperwork with confidence.
-              </p>
-              <div className="mt-8 flex flex-wrap gap-3">
-                <a href={`tel:${PHONE_TEL}`} className="inline-flex h-12 items-center justify-center rounded-md bg-foreground px-6 text-sm font-medium text-background transition-opacity hover:opacity-90">
-                  <Phone className="mr-2 h-4 w-4" /> Call {PHONE_DISPLAY}
-                </a>
-                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="inline-flex h-12 items-center justify-center rounded-md border border-foreground/15 bg-transparent px-6 text-sm font-medium text-foreground transition-colors hover:bg-foreground/5">
-                  <MessageCircle className="mr-2 h-3.5 w-3.5 text-[#25D366]" /> WhatsApp {PHONE_DISPLAY}
-                </a>
-              </div>
-              <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-3 text-sm text-muted-foreground">
-                <div className="flex items-center gap-2"><Check className="h-4 w-4 text-[var(--gold-deep)]" /> IRS tax filing</div>
-                <div className="flex items-center gap-2"><Check className="h-4 w-4 text-[var(--gold-deep)]" /> Business compliance</div>
-                <div className="flex items-center gap-2"><Check className="h-4 w-4 text-[var(--gold-deep)]" /> Bilingual support</div>
-              </div>
+          <div className="mx-auto flex max-w-6xl flex-col items-center px-6 py-20 text-center lg:py-28">
+            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-card px-3 py-1 text-xs uppercase tracking-widest text-muted-foreground">
+              <span className="h-1.5 w-1.5 rounded-full bg-[var(--gold)]" />
+              Trusted financial & filing services
             </div>
-            <div className="relative">
+            <h1 className="max-w-4xl text-4xl font-semibold leading-[1.1] tracking-tight sm:text-5xl lg:text-6xl">
+              Professional Tax Preparation, Business Compliance & <span className="italic text-[var(--gold-deep)] font-serif">Immigration Services</span>
+            </h1>
+            <p className="mt-6 max-w-3xl text-lg leading-[1.85] text-muted-foreground sm:text-xl">
+              At HC Services Financial, we believe every family and business deserves trusted guidance when it comes to taxes, immigration, and financial services. We take the time to understand your unique needs and provide personalized support every step of the way. Whether you're filing taxes, starting a business, handling immigration paperwork, or enrolling in health insurance, we're here to make the process simple, clear, and stress-free.
+            </p>
+            <div className="mt-8 flex flex-wrap justify-center gap-3">
+              <a href={`tel:${PHONE_TEL}`} className="inline-flex h-12 items-center justify-center rounded-md bg-foreground px-6 text-sm font-medium text-background transition-opacity hover:opacity-90">
+                <Phone className="mr-2 h-4 w-4" /> Call {PHONE_DISPLAY}
+              </a>
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="inline-flex h-12 items-center justify-center rounded-md border border-foreground/15 bg-transparent px-6 text-sm font-medium text-foreground transition-colors hover:bg-foreground/5">
+                <MessageCircle className="mr-2 h-3.5 w-3.5 text-[#25D366]" /> WhatsApp {PHONE_DISPLAY}
+              </a>
+            </div>
+            <div className="mt-10 flex flex-wrap justify-center gap-x-8 gap-y-3 text-sm text-muted-foreground">
+              <div className="flex items-center gap-2"><Check className="h-4 w-4 text-[var(--gold-deep)]" /> IRS tax filing</div>
+              <div className="flex items-center gap-2"><Check className="h-4 w-4 text-[var(--gold-deep)]" /> Business compliance</div>
+              <div className="flex items-center gap-2"><Check className="h-4 w-4 text-[var(--gold-deep)]" /> Bilingual support</div>
+            </div>
+            <div className="relative mt-16 w-full max-w-4xl">
               <div className="absolute -inset-6 -z-10 rounded-3xl bg-gradient-to-br from-[oklch(0.95_0.04_85)] to-transparent" />
               <img
                 src={heroImage}
