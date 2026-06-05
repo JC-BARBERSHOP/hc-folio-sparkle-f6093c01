@@ -80,7 +80,7 @@ const translations = {
     contactTitle: "Let's get your paperwork in order",
     contactDesc: "Reach out by phone or WhatsApp. We'll walk you through the next steps with no pressure.",
     contactPhone: "Phone", contactEmail: "Email", contactLocation: "Location", contactHours: "Hours",
-    contactLocationVal: "[Add city/state]", contactHoursVal: "[Add hours]",
+    contactLocationVal: "Miami, FL Area", contactHoursVal: "Monday – Friday\n9:00 AM – 5:00 PM", contactLocationSub: "Serving Miami-Dade County and surrounding areas.",
     footerRights: "All rights reserved.",
     footerTagline: "Tax preparation · Business compliance · Immigration documents · Health insurance",
     stickyCall: "Call", stickyWhatsApp: "WhatsApp",
@@ -120,7 +120,7 @@ const translations = {
     contactTitle: "Pongamos sus documentos en orden",
     contactDesc: "Contáctenos por teléfono o WhatsApp. Le guiamos en los próximos pasos sin compromiso.",
     contactPhone: "Teléfono", contactEmail: "Correo", contactLocation: "Ubicación", contactHours: "Horario",
-    contactLocationVal: "[Agregar ciudad/estado]", contactHoursVal: "[Agregar horario]",
+    contactLocationVal: "Área de Miami, FL", contactHoursVal: "Lunes – Viernes\n9:00 AM – 5:00 PM", contactLocationSub: "Atendemos el Condado de Miami-Dade y áreas cercanas.",
     footerRights: "Todos los derechos reservados.",
     footerTagline: "Preparación de impuestos · Cumplimiento de negocios · Documentos de inmigración · Seguro médico",
     stickyCall: "Llamar", stickyWhatsApp: "WhatsApp",
@@ -327,19 +327,31 @@ function Index() {
               </a>
             </div>
             <div className="mx-auto mt-14 grid max-w-2xl gap-4 sm:grid-cols-2">
-              {[
-                { icon: Phone, label: t.contactPhone, value: PHONE_DISPLAY },
-                { icon: Mail, label: t.contactEmail, value: "hcservicesfinancial@gmail.com" },
-                { icon: MapPin, label: t.contactLocation, value: t.contactLocationVal },
-                { icon: Clock, label: t.contactHours, value: t.contactHoursVal },
-              ].map(({ icon: Icon, label, value }) => (
-                <div key={label} className="rounded-xl border border-border bg-background p-5 text-left">
-                  <div className="flex items-center gap-2 text-xs uppercase tracking-widest text-muted-foreground">
-                    <Icon className="h-3.5 w-3.5 text-[var(--gold-deep)]" /> {label}
-                  </div>
-                  <p className="mt-2 text-sm font-medium">{value}</p>
+              <div className="rounded-xl border border-border bg-background p-5 text-left">
+                <div className="flex items-center gap-2 text-xs uppercase tracking-widest text-muted-foreground">
+                  <Phone className="h-3.5 w-3.5 text-[var(--gold-deep)]" /> {t.contactPhone}
                 </div>
-              ))}
+                <p className="mt-2 text-sm font-medium">{PHONE_DISPLAY}</p>
+              </div>
+              <div className="rounded-xl border border-border bg-background p-5 text-left">
+                <div className="flex items-center gap-2 text-xs uppercase tracking-widest text-muted-foreground">
+                  <Mail className="h-3.5 w-3.5 text-[var(--gold-deep)]" /> {t.contactEmail}
+                </div>
+                <p className="mt-2 text-sm font-medium">hcservicesfinancial@gmail.com</p>
+              </div>
+              <div className="rounded-xl border border-border bg-background p-5 text-left">
+                <div className="flex items-center gap-2 text-xs uppercase tracking-widest text-muted-foreground">
+                  <MapPin className="h-3.5 w-3.5 text-[var(--gold-deep)]" /> {t.contactLocation}
+                </div>
+                <p className="mt-2 text-sm font-medium">{t.contactLocationVal}</p>
+                <p className="mt-1 text-xs text-muted-foreground">{t.contactLocationSub}</p>
+              </div>
+              <div className="rounded-xl border border-border bg-background p-5 text-left">
+                <div className="flex items-center gap-2 text-xs uppercase tracking-widest text-muted-foreground">
+                  <Clock className="h-3.5 w-3.5 text-[var(--gold-deep)]" /> {t.contactHours}
+                </div>
+                <p className="mt-2 text-sm font-medium whitespace-pre-line">{t.contactHoursVal}</p>
+              </div>
             </div>
             <div className="mt-10 flex justify-center md:hidden">
               <LangToggle />
