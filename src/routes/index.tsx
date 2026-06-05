@@ -84,8 +84,8 @@ function Index() {
             <a href={`tel:${PHONE_TEL}`} className="hidden items-center gap-2 rounded-md border border-foreground/15 px-3 py-2 text-sm font-medium transition-colors hover:bg-foreground/5 sm:inline-flex">
               <Phone className="h-4 w-4 text-[var(--gold-deep)]" /> {PHONE_DISPLAY}
             </a>
-            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" className="inline-flex h-9 items-center justify-center gap-2 rounded-md bg-[#25D366] px-4 text-sm font-medium text-white transition-opacity hover:opacity-90">
-              <MessageCircle className="h-4 w-4" /> WhatsApp
+            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" className="inline-flex h-9 items-center justify-center gap-2 rounded-md bg-foreground px-4 text-sm font-medium text-background transition-opacity hover:opacity-90">
+              <MessageCircle className="h-3.5 w-3.5 text-[#25D366]" /> WhatsApp
             </a>
           </div>
         </div>
@@ -110,8 +110,8 @@ function Index() {
                 <a href={`tel:${PHONE_TEL}`} className="inline-flex h-12 items-center justify-center rounded-md bg-foreground px-6 text-sm font-medium text-background transition-opacity hover:opacity-90">
                   <Phone className="mr-2 h-4 w-4" /> Call {PHONE_DISPLAY}
                 </a>
-                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="inline-flex h-12 items-center justify-center rounded-md bg-[#25D366] px-6 text-sm font-medium text-white transition-opacity hover:opacity-90">
-                  <MessageCircle className="mr-2 h-4 w-4" /> WhatsApp {PHONE_DISPLAY}
+                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="inline-flex h-12 items-center justify-center rounded-md border border-foreground/15 bg-transparent px-6 text-sm font-medium text-foreground transition-colors hover:bg-foreground/5">
+                  <MessageCircle className="mr-2 h-3.5 w-3.5 text-[#25D366]" /> WhatsApp {PHONE_DISPLAY}
                 </a>
               </div>
               <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-3 text-sm text-muted-foreground">
@@ -287,8 +287,8 @@ function Index() {
               <a href={`tel:${PHONE_TEL}`} className="inline-flex h-12 items-center justify-center rounded-md bg-foreground px-8 text-sm font-medium text-background transition-opacity hover:opacity-90">
                 <Phone className="mr-2 h-4 w-4" /> Call {PHONE_DISPLAY}
               </a>
-              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="inline-flex h-12 items-center justify-center rounded-md bg-[#25D366] px-8 text-sm font-medium text-white transition-opacity hover:opacity-90">
-                <MessageCircle className="mr-2 h-4 w-4" /> WhatsApp {PHONE_DISPLAY}
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="inline-flex h-12 items-center justify-center rounded-md border border-foreground/15 px-8 text-sm font-medium transition-colors hover:bg-foreground/5">
+                <MessageCircle className="mr-2 h-3.5 w-3.5 text-[#25D366]" /> WhatsApp {PHONE_DISPLAY}
               </a>
             </div>
           </div>
@@ -307,8 +307,8 @@ function Index() {
                 <a href={`tel:${PHONE_TEL}`} className="inline-flex h-12 items-center justify-center rounded-md bg-foreground px-6 text-sm font-medium text-background transition-opacity hover:opacity-90">
                   <Phone className="mr-2 h-4 w-4" /> Call {PHONE_DISPLAY}
                 </a>
-                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="inline-flex h-12 items-center justify-center rounded-md bg-[#25D366] px-6 text-sm font-medium text-white transition-opacity hover:opacity-90">
-                  <MessageCircle className="mr-2 h-4 w-4" /> WhatsApp
+                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="inline-flex h-12 items-center justify-center rounded-md border border-foreground/15 px-6 text-sm font-medium transition-colors hover:bg-foreground/5">
+                  <MessageCircle className="mr-2 h-3.5 w-3.5 text-[#25D366]" /> WhatsApp
                 </a>
               </div>
             </div>
@@ -355,10 +355,10 @@ function Index() {
           href={WHATSAPP_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex h-14 flex-1 items-center justify-center gap-2 rounded-full bg-[#25D366] text-white shadow-lg shadow-foreground/20 transition-opacity hover:opacity-90"
+          className="flex h-14 flex-1 items-center justify-center gap-2 rounded-full border border-foreground/15 bg-background text-foreground shadow-lg shadow-foreground/20 transition-colors hover:bg-foreground/5"
           aria-label="Chat on WhatsApp"
         >
-          <MessageCircle className="h-5 w-5" />
+          <MessageCircle className="h-4 w-4 text-[#25D366]" />
           <span className="text-sm font-semibold">WhatsApp</span>
         </a>
       </div>
