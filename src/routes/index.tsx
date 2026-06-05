@@ -4,7 +4,7 @@ import hcLogo from "@/assets/hc-logo.jpeg.asset.json";
 import {
   FileText, Building2, Landmark, Receipt, Briefcase, ShieldCheck,
   FileSignature, Users, IdCard, BookUser, HeartPulse, ScrollText,
-  Phone, Mail, MapPin, Clock, Check, ArrowRight,
+  Phone, Mail, MapPin, Clock, Check, ArrowRight, MessageCircle,
 } from "lucide-react";
 
 export const Route = createFileRoute("/")({
@@ -40,6 +40,7 @@ export const Route = createFileRoute("/")({
 
 const PHONE_DISPLAY = "(646) 620-2960";
 const PHONE_TEL = "+16466202960";
+const WHATSAPP_URL = "https://wa.me/16466202960";
 
 const services = [
   { icon: FileText, title: "Personal Tax Preparation", desc: "Accurate income tax preparation for individuals and families." },
@@ -83,8 +84,8 @@ function Index() {
             <a href={`tel:${PHONE_TEL}`} className="hidden items-center gap-2 rounded-md border border-foreground/15 px-3 py-2 text-sm font-medium transition-colors hover:bg-foreground/5 sm:inline-flex">
               <Phone className="h-4 w-4 text-[var(--gold-deep)]" /> {PHONE_DISPLAY}
             </a>
-            <a href="#contact" className="inline-flex h-9 items-center justify-center rounded-md bg-foreground px-4 text-sm font-medium text-background transition-opacity hover:opacity-90">
-              Schedule
+            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" className="inline-flex h-9 items-center justify-center gap-2 rounded-md bg-[#25D366] px-4 text-sm font-medium text-white transition-opacity hover:opacity-90">
+              <MessageCircle className="h-4 w-4" /> WhatsApp
             </a>
           </div>
         </div>
@@ -106,11 +107,11 @@ function Index() {
                 HC Services Financial helps individuals, families, and business owners file taxes, stay compliant, and handle important financial and immigration paperwork with confidence.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
-                <a href="#contact" className="inline-flex h-12 items-center justify-center rounded-md bg-foreground px-6 text-sm font-medium text-background transition-opacity hover:opacity-90">
-                  Schedule a Consultation <ArrowRight className="ml-2 h-4 w-4" />
+                <a href={`tel:${PHONE_TEL}`} className="inline-flex h-12 items-center justify-center rounded-md bg-foreground px-6 text-sm font-medium text-background transition-opacity hover:opacity-90">
+                  <Phone className="mr-2 h-4 w-4" /> Call {PHONE_DISPLAY}
                 </a>
-                <a href={`tel:${PHONE_TEL}`} className="inline-flex h-12 items-center justify-center rounded-md border border-foreground/15 bg-transparent px-6 text-sm font-medium text-foreground transition-colors hover:bg-foreground/5">
-                  <Phone className="mr-2 h-4 w-4 text-[var(--gold-deep)]" /> Call {PHONE_DISPLAY}
+                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="inline-flex h-12 items-center justify-center rounded-md bg-[#25D366] px-6 text-sm font-medium text-white transition-opacity hover:opacity-90">
+                  <MessageCircle className="mr-2 h-4 w-4" /> WhatsApp {PHONE_DISPLAY}
                 </a>
               </div>
               <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-3 text-sm text-muted-foreground">
@@ -280,14 +281,16 @@ function Index() {
               Need Help Filing Taxes or Organizing Your Business Documents?
             </h2>
             <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
-              Contact HC Services Financial today to schedule a consultation and get professional support with taxes, business compliance, immigration paperwork, or health insurance enrollment.
+              Contact HC Services Financial today for professional support with taxes, business compliance, immigration paperwork, or health insurance enrollment.
             </p>
-            <a href="#contact" className="mt-10 inline-flex h-12 items-center justify-center rounded-md bg-foreground px-8 text-sm font-medium text-background transition-opacity hover:opacity-90">
-              Contact Us Today <ArrowRight className="ml-2 h-4 w-4" />
-            </a>
-            <a href={`tel:${PHONE_TEL}`} className="mt-3 ml-3 inline-flex h-12 items-center justify-center rounded-md border border-foreground/15 px-8 text-sm font-medium transition-colors hover:bg-foreground/5">
-              <Phone className="mr-2 h-4 w-4 text-[var(--gold-deep)]" /> Call {PHONE_DISPLAY}
-            </a>
+            <div className="mt-10 flex flex-wrap justify-center gap-3">
+              <a href={`tel:${PHONE_TEL}`} className="inline-flex h-12 items-center justify-center rounded-md bg-foreground px-8 text-sm font-medium text-background transition-opacity hover:opacity-90">
+                <Phone className="mr-2 h-4 w-4" /> Call {PHONE_DISPLAY}
+              </a>
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="inline-flex h-12 items-center justify-center rounded-md bg-[#25D366] px-8 text-sm font-medium text-white transition-opacity hover:opacity-90">
+                <MessageCircle className="mr-2 h-4 w-4" /> WhatsApp {PHONE_DISPLAY}
+              </a>
+            </div>
           </div>
         </section>
 
@@ -298,14 +301,14 @@ function Index() {
               <p className="mb-4 text-xs uppercase tracking-[0.2em] text-[var(--gold-deep)]">Contact</p>
               <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">Let's get your paperwork in order</h2>
               <p className="mt-6 max-w-md text-muted-foreground">
-                Reach out to schedule a consultation. We'll walk you through the next steps with no pressure.
+                Reach out by phone or WhatsApp. We'll walk you through the next steps with no pressure.
               </p>
               <div className="mt-10 flex flex-wrap gap-3">
                 <a href={`tel:${PHONE_TEL}`} className="inline-flex h-12 items-center justify-center rounded-md bg-foreground px-6 text-sm font-medium text-background transition-opacity hover:opacity-90">
                   <Phone className="mr-2 h-4 w-4" /> Call {PHONE_DISPLAY}
                 </a>
-                <a href="mailto:hcservicesfinancial@gmail.com" className="inline-flex h-12 items-center justify-center rounded-md border border-foreground/15 px-6 text-sm font-medium transition-colors hover:bg-foreground/5">
-                  <Mail className="mr-2 h-4 w-4" /> Send Message
+                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="inline-flex h-12 items-center justify-center rounded-md bg-[#25D366] px-6 text-sm font-medium text-white transition-opacity hover:opacity-90">
+                  <MessageCircle className="mr-2 h-4 w-4" /> WhatsApp
                 </a>
               </div>
             </div>
@@ -339,14 +342,26 @@ function Index() {
       </footer>
 
       {/* Sticky mobile call button */}
-      <a
-        href={`tel:${PHONE_TEL}`}
-        className="fixed bottom-4 left-4 right-4 z-50 flex h-14 items-center justify-center gap-2 rounded-full bg-foreground text-background shadow-lg shadow-foreground/20 transition-opacity hover:opacity-90 md:hidden"
-        aria-label={`Call ${PHONE_DISPLAY}`}
-      >
-        <Phone className="h-5 w-5 text-[var(--gold)]" />
-        <span className="text-sm font-semibold">Call {PHONE_DISPLAY}</span>
-      </a>
+      <div className="fixed bottom-4 left-4 right-4 z-50 flex gap-2 md:hidden">
+        <a
+          href={`tel:${PHONE_TEL}`}
+          className="flex h-14 flex-1 items-center justify-center gap-2 rounded-full bg-foreground text-background shadow-lg shadow-foreground/20 transition-opacity hover:opacity-90"
+          aria-label={`Call ${PHONE_DISPLAY}`}
+        >
+          <Phone className="h-5 w-5 text-[var(--gold)]" />
+          <span className="text-sm font-semibold">Call</span>
+        </a>
+        <a
+          href={WHATSAPP_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex h-14 flex-1 items-center justify-center gap-2 rounded-full bg-[#25D366] text-white shadow-lg shadow-foreground/20 transition-opacity hover:opacity-90"
+          aria-label="Chat on WhatsApp"
+        >
+          <MessageCircle className="h-5 w-5" />
+          <span className="text-sm font-semibold">WhatsApp</span>
+        </a>
+      </div>
     </div>
   );
 }
