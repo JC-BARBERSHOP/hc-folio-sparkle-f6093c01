@@ -2,9 +2,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import heroImage from "@/assets/hero-consultant.jpg";
 import hcLogo from "@/assets/hc-logo.jpeg.asset.json";
 import {
-  FileText, Building2, Landmark, Receipt, Briefcase, ShieldCheck,
-  FileSignature, Users, IdCard, BookUser, HeartPulse, ScrollText,
-  Phone, Mail, MapPin, Clock, Check, ArrowRight, MessageCircle,
+  FileText, Briefcase, FileSignature, HeartPulse,
+  Phone, Mail, MapPin, Clock, Check, MessageCircle,
 } from "lucide-react";
 
 export const Route = createFileRoute("/")({
@@ -42,27 +41,20 @@ const PHONE_DISPLAY = "(646) 620-2960";
 const PHONE_TEL = "+16466202960";
 const WHATSAPP_URL = "https://wa.me/16466202960";
 
-const services = [
-  { icon: FileText, title: "Personal Tax Preparation", desc: "Accurate income tax preparation for individuals and families." },
-  { icon: Building2, title: "Business & Corporation Tax Filing", desc: "Corporation tax filing and business tax services done right." },
-  { icon: Landmark, title: "IRS Tax Filing Assistance", desc: "Hands-on help with IRS forms, returns, and correspondence." },
-  { icon: Receipt, title: "Monthly Sales Tax Filing", desc: "Stay current with state sales and monthly tax filing." },
-  { icon: Briefcase, title: "Business Formation & Corporation Setup", desc: "Open your corporation or LLC with the proper paperwork." },
-  { icon: ShieldCheck, title: "Business Compliance Support", desc: "Keep your business active, compliant, and audit-ready." },
-  { icon: FileSignature, title: "Immigration Document Preparation", desc: "Careful preparation of immigration paperwork and forms." },
-  { icon: ScrollText, title: "Asylum Applications", desc: "Assistance preparing asylum application documents." },
-  { icon: IdCard, title: "Green Card Applications", desc: "Document preparation for green card applications." },
-  { icon: BookUser, title: "Passport Assistance", desc: "Guidance and paperwork support for passport applications." },
-  { icon: Users, title: "Family Petitions", desc: "Help organizing and preparing family petition documents." },
-  { icon: HeartPulse, title: "Obamacare / Health Insurance", desc: "Enrollment support for marketplace health insurance plans." },
-];
-
 const nav = [
-  { href: "#services", label: "Services" },
-  { href: "#taxes", label: "Taxes" },
+  { href: "#about", label: "About" },
+  { href: "#taxes", label: "Tax" },
   { href: "#business", label: "Business" },
   { href: "#immigration", label: "Immigration" },
+  { href: "#health", label: "Health" },
   { href: "#contact", label: "Contact" },
+];
+
+const whyChoose = [
+  "Experienced tax professionals",
+  "Personalized one-on-one service",
+  "Bilingual support",
+  "Fast, reliable & confidential",
 ];
 
 function Index() {
