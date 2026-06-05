@@ -168,13 +168,13 @@ function Index() {
               <a key={n.href} href={n.href} className="text-sm text-muted-foreground transition-colors hover:text-foreground">{n.label}</a>
             ))}
           </nav>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-5">
             <LangToggle />
-            <a href={`tel:${PHONE_TEL}`} className="hidden items-center gap-2 rounded-md border border-foreground/15 px-3 py-2 text-sm font-medium transition-colors hover:bg-foreground/5 sm:inline-flex">
+            <a href={`tel:${PHONE_TEL}`} className="hidden items-center gap-2 text-sm font-medium transition-colors hover:opacity-70 sm:inline-flex">
               <Phone className="h-4 w-4 text-[var(--gold-deep)]" /> {PHONE_DISPLAY}
             </a>
-            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" className="inline-flex h-9 items-center justify-center gap-2 rounded-md bg-foreground px-4 text-sm font-medium text-background transition-opacity hover:opacity-90">
-              <MessageCircle className="h-3.5 w-3.5 text-[#25D366]" /> WhatsApp
+            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" className="transition-opacity hover:opacity-70">
+              <MessageCircle className="h-5 w-5 text-[#25D366]" />
             </a>
           </div>
         </div>
