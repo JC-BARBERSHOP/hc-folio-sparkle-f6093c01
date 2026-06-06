@@ -50,8 +50,18 @@ const translations = {
     heroDesc: "At HC Services Financial, we provide trusted support for individuals, families, and business owners who need help with immigration paperwork, income tax services, health insurance, and important financial documents. Our goal is to make every process clear, organized, and easier to handle with personal guidance you can trust.",
     btnCall: "Call", btnWhatsApp: "WhatsApp",
     aboutLabel: "About",
-    aboutTitle: "Trusted Guidance for Taxes, Business & Family Documents",
-    aboutDesc: "HC Services Financial provides reliable support for individuals, families, and business owners who need help with tax preparation, IRS tax filing, business compliance, immigration paperwork, and health insurance enrollment. Our goal is to make the process simple, organized, and stress-free.",
+    aboutTitle: "About HC Services Financial",
+    aboutP1: "At HC Services Financial, we provide trusted support for individuals, families, and business owners who need assistance with immigration paperwork, income tax services, health insurance enrollment, and important financial documents.",
+    aboutP2: "We understand that many clients prefer convenience and flexibility, which is why most of our services can be completed remotely. Whether you're located in Miami or elsewhere, we can assist you through phone, email, WhatsApp, and secure document sharing, making the process simple and efficient from the comfort of your home or office.",
+    aboutP3: "For clients who prefer face-to-face assistance, in-office appointments are also available by appointment.",
+    aboutP4: "Our goal is to make every process clear, organized, and stress-free while providing the personalized attention and professional guidance you deserve.",
+    aboutWhyTitle: "Why Clients Choose Us",
+    aboutWhy1: "Most services available remotely",
+    aboutWhy2: "In-person appointments available",
+    aboutWhy3: "Personalized one-on-one assistance",
+    aboutWhy4: "English and Spanish support",
+    aboutWhy5: "Fast and responsive communication",
+    aboutWhy6: "Professional guidance you can trust",
     servicesLabel: "Services",
     servicesTitle: "What We Do",
     svcImmTitle: "Immigration",
@@ -83,8 +93,18 @@ const translations = {
     heroDesc: "En HC Services Financial, brindamos apoyo confiable a personas, familias y dueños de negocio que necesitan ayuda con trámites de inmigración, servicios de impuestos, seguro médico y documentos financieros importantes. Nuestro objetivo es hacer cada proceso claro, organizado y más fácil de manejar con orientación personal en la que puede confiar.",
     btnCall: "Llamar", btnWhatsApp: "WhatsApp",
     aboutLabel: "Nosotros",
-    aboutTitle: "Orientación Confiable en Impuestos, Negocios y Documentos Familiares",
-    aboutDesc: "HC Services Financial ofrece apoyo confiable a personas, familias y dueños de negocio que necesitan ayuda con la preparación de impuestos, declaración ante el IRS, cumplimiento de negocios, trámites de inmigración e inscripción a seguros médicos. Nuestro objetivo es que el proceso sea simple, ordenado y sin estrés.",
+    aboutTitle: "Sobre HC Services Financial",
+    aboutP1: "En HC Services Financial, brindamos apoyo confiable a personas, familias y dueños de negocio que necesitan ayuda con trámites de inmigración, servicios de impuestos, inscripción a seguros médicos y documentos financieros importantes.",
+    aboutP2: "Entendemos que muchos clientes prefieren comodidad y flexibilidad, por eso la mayoría de nuestros servicios se pueden completar de forma remota. Ya sea que se encuentre en Miami o en cualquier otro lugar, podemos atenderle por teléfono, correo electrónico, WhatsApp y compartición segura de documentos, haciendo el proceso simple y eficiente desde la comodidad de su hogar u oficina.",
+    aboutP3: "Para los clientes que prefieren atención cara a cara, también ofrecemos citas en oficina previa cita.",
+    aboutP4: "Nuestro objetivo es hacer cada proceso claro, organizado y sin estrés, brindándole la atención personalizada y la orientación profesional que usted merece.",
+    aboutWhyTitle: "Por Qué Nos Eligen Nuestros Clientes",
+    aboutWhy1: "La mayoría de servicios disponibles de forma remota",
+    aboutWhy2: "Citas presenciales disponibles",
+    aboutWhy3: "Atención personalizada uno a uno",
+    aboutWhy4: "Atención en inglés y español",
+    aboutWhy5: "Comunicación rápida y atenta",
+    aboutWhy6: "Orientación profesional en la que puede confiar",
     servicesLabel: "Servicios",
     servicesTitle: "Nuestros Servicios",
     svcImmTitle: "Inmigración",
@@ -199,13 +219,29 @@ function Index() {
         {/* About */}
         <section id="about" className="border-t border-border/60 bg-card">
           <div className="mx-auto max-w-4xl px-6 py-20 text-center lg:py-28">
-            <p className="mb-4 uppercase tracking-[0.2em] text-base">{t.aboutLabel}</p>
+            <p className="mb-4 uppercase tracking-[0.2em] text-base text-[var(--gold-deep)]">{t.aboutLabel}</p>
             <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
               {t.aboutTitle}
             </h2>
-            <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-              {t.aboutDesc}
-            </p>
+            <div className="mx-auto mt-8 max-w-2xl space-y-5 text-lg leading-relaxed text-muted-foreground">
+              <p>{t.aboutP1}</p>
+              <p>{t.aboutP2}</p>
+              <p>{t.aboutP3}</p>
+              <p>{t.aboutP4}</p>
+            </div>
+            <div className="mx-auto mt-16 max-w-2xl">
+              <h3 className="text-xl font-semibold tracking-tight">{t.aboutWhyTitle}</h3>
+              <ul className="mx-auto mt-8 grid max-w-xl gap-4 text-left sm:grid-cols-2">
+                {[t.aboutWhy1, t.aboutWhy2, t.aboutWhy3, t.aboutWhy4, t.aboutWhy5, t.aboutWhy6].map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-sm">
+                    <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[var(--gold)]/15 text-[var(--gold-deep)]">
+                      <Check className="h-3 w-3" />
+                    </span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </section>
 
