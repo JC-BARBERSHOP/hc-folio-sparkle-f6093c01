@@ -51,7 +51,7 @@ const translations = {
     btnCall: "Call", btnWhatsApp: "WhatsApp",
     aboutLabel: "About",
     aboutTitle: "About HC Services Financial",
-    aboutP1: "At HC Services Financial, we provide trusted support for individuals, families, and business owners who need assistance with immigration paperwork, income tax services, health insurance enrollment, and important financial documents.",
+    aboutP1: "At HC Services Financial, we provide trusted tax preparation and accounting support for individuals, families, and business owners. We also assist with immigration paperwork, health insurance enrollment, and important financial documents.",
     aboutP2: "We understand that many clients prefer convenience and flexibility, which is why most of our services can be completed remotely. Whether you're located in Miami or elsewhere, we can assist you through phone, email, WhatsApp, and secure document sharing, making the process simple and efficient from the comfort of your home or office.",
     aboutP3: "For clients who prefer face-to-face assistance, in-office appointments are also available by appointment.",
     aboutP4: "Our goal is to make every process clear, organized, and stress-free while providing the personalized attention and professional guidance you deserve.",
