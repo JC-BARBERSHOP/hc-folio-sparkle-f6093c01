@@ -209,7 +209,7 @@ function Index() {
       <main id="top">
         {/* Hero */}
         <section className="relative overflow-hidden">
-          <div className="mx-auto flex max-w-6xl flex-col items-center px-6 py-24 text-center lg:py-36">
+          <div className="mx-auto flex max-w-6xl flex-col items-center px-6 py-20 text-center lg:py-32">
             <div className="mb-10 flex flex-col items-center">
               <img src={hcLogo.url} alt="HC Services Financial logo" width={120} height={120} className="h-24 w-24 rounded-full object-cover sm:h-28 sm:w-28" />
               <h2 className="mt-6 text-lg font-bold uppercase tracking-[0.25em] sm:text-xl">
