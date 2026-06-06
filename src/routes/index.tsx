@@ -46,12 +46,12 @@ type Lang = "en" | "es";
 const translations = {
   en: {
     navAbout: "About", navServices: "Services", navWhy: "Why Us", navContact: "Contact",
-    heroTagline: "Immigration • Income Tax Services • Health Insurance",
-    heroDesc: "At HC Services Financial, we provide trusted support for individuals, families, and business owners who need help with immigration paperwork, income tax services, health insurance, and important financial documents. Our goal is to make every process clear, organized, and easier to handle with personal guidance you can trust.",
+    heroTagline: "Income Tax Services • Immigration • Health Insurance",
+    heroDesc: "At HC Services Financial, we provide trusted tax preparation and accounting support for individuals, families, and business owners. We also assist with immigration document preparation, health insurance enrollment, and important financial paperwork. Our goal is to make every process clear, organized, and stress-free while providing personalized guidance you can trust.",
     btnCall: "Call", btnWhatsApp: "WhatsApp",
     aboutLabel: "About",
     aboutTitle: "About HC Services Financial",
-    aboutP1: "At HC Services Financial, we provide trusted support for individuals, families, and business owners who need assistance with immigration paperwork, income tax services, health insurance enrollment, and important financial documents.",
+    aboutP1: "At HC Services Financial, we provide trusted tax preparation and accounting support for individuals, families, and business owners. We also assist with immigration paperwork, health insurance enrollment, and important financial documents.",
     aboutP2: "We understand that many clients prefer convenience and flexibility, which is why most of our services can be completed remotely. Whether you're located in Miami or elsewhere, we can assist you through phone, email, WhatsApp, and secure document sharing, making the process simple and efficient from the comfort of your home or office.",
     aboutP3: "For clients who prefer face-to-face assistance, in-office appointments are also available by appointment.",
     aboutP4: "Our goal is to make every process clear, organized, and stress-free while providing the personalized attention and professional guidance you deserve.",
@@ -95,12 +95,12 @@ const translations = {
   },
   es: {
     navAbout: "Nosotros", navServices: "Servicios", navWhy: "Por Qué Nosotros", navContact: "Contacto",
-    heroTagline: "Inmigración • Servicios de Impuestos • Seguro Médico",
-    heroDesc: "En HC Services Financial, brindamos apoyo confiable a personas, familias y dueños de negocio que necesitan ayuda con trámites de inmigración, servicios de impuestos, seguro médico y documentos financieros importantes. Nuestro objetivo es hacer cada proceso claro, organizado y más fácil de manejar con orientación personal en la que puede confiar.",
+    heroTagline: "Servicios de Impuestos • Inmigración • Seguro Médico",
+    heroDesc: "En HC Services Financial, brindamos preparación de impuestos y apoyo contable confiable para personas, familias y dueños de negocio. También ayudamos con la preparación de documentos de inmigración, inscripción a seguros médicos y documentación financiera importante. Nuestro objetivo es hacer cada proceso claro, organizado y sin estrés, brindándole orientación personalizada en la que puede confiar.",
     btnCall: "Llamar", btnWhatsApp: "WhatsApp",
     aboutLabel: "Nosotros",
     aboutTitle: "Sobre HC Services Financial",
-    aboutP1: "En HC Services Financial, brindamos apoyo confiable a personas, familias y dueños de negocio que necesitan ayuda con trámites de inmigración, servicios de impuestos, inscripción a seguros médicos y documentos financieros importantes.",
+    aboutP1: "En HC Services Financial, brindamos preparación de impuestos y apoyo contable confiable para personas, familias y dueños de negocio. También ayudamos con trámites de inmigración, inscripción a seguros médicos y documentos financieros importantes.",
     aboutP2: "Entendemos que muchos clientes prefieren comodidad y flexibilidad, por eso la mayoría de nuestros servicios se pueden completar de forma remota. Ya sea que se encuentre en Miami o en cualquier otro lugar, podemos atenderle por teléfono, correo electrónico, WhatsApp y compartición segura de documentos, haciendo el proceso simple y eficiente desde la comodidad de su hogar u oficina.",
     aboutP3: "Para los clientes que prefieren atención cara a cara, también ofrecemos citas en oficina previa cita.",
     aboutP4: "Nuestro objetivo es hacer cada proceso claro, organizado y sin estrés, brindándole la atención personalizada y la orientación profesional que usted merece.",
@@ -164,9 +164,9 @@ function Index() {
   ];
   const serviceCategories = [
     { icon: Calculator, title: t.svcTaxTitle, desc: t.svcTaxDesc, items: t.svcTaxItems },
-    { icon: FileCheck, title: t.svcNotaryTitle, desc: t.svcNotaryDesc, items: t.svcNotaryItems },
     { icon: Globe, title: t.svcImmTitle, desc: t.svcImmDesc, items: t.svcImmItems, disclaimer: t.svcImmDisclaimer },
     { icon: HeartPulse, title: t.svcHealthTitle, desc: t.svcHealthDesc, items: t.svcHealthItems },
+    { icon: FileCheck, title: t.svcNotaryTitle, desc: t.svcNotaryDesc, items: t.svcNotaryItems },
   ];
   const whyChoose = [t.why1, t.why2, t.why3, t.why4];
   const LangToggle = ({ className = "" }: { className?: string }) => (
