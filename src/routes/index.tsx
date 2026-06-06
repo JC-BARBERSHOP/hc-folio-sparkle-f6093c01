@@ -164,9 +164,9 @@ function Index() {
   ];
   const serviceCategories = [
     { icon: Calculator, title: t.svcTaxTitle, desc: t.svcTaxDesc, items: t.svcTaxItems },
-    { icon: FileCheck, title: t.svcNotaryTitle, desc: t.svcNotaryDesc, items: t.svcNotaryItems },
     { icon: Globe, title: t.svcImmTitle, desc: t.svcImmDesc, items: t.svcImmItems, disclaimer: t.svcImmDisclaimer },
     { icon: HeartPulse, title: t.svcHealthTitle, desc: t.svcHealthDesc, items: t.svcHealthItems },
+    { icon: FileCheck, title: t.svcNotaryTitle, desc: t.svcNotaryDesc, items: t.svcNotaryItems },
   ];
   const whyChoose = [t.why1, t.why2, t.why3, t.why4];
   const LangToggle = ({ className = "" }: { className?: string }) => (
