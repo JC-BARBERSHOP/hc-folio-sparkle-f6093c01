@@ -370,15 +370,33 @@ function Index() {
             <div className="mx-auto mt-14 grid max-w-2xl gap-4 sm:grid-cols-2">
               <div className="rounded-xl border border-border bg-background p-5 text-left">
                 <div className="flex items-center gap-2 text-xs uppercase tracking-widest text-muted-foreground">
+                  <MapPin className="h-3.5 w-3.5 text-[var(--gold-deep)]" /> {t.contactAddress}
+                </div>
+                <p className="mt-2 text-sm font-medium whitespace-pre-line">{t.contactAddressVal}</p>
+              </div>
+              <div className="rounded-xl border border-border bg-background p-5 text-left">
+                <div className="flex items-center gap-2 text-xs uppercase tracking-widest text-muted-foreground">
                   <Phone className="h-3.5 w-3.5 text-[var(--gold-deep)]" /> {t.contactPhone}
                 </div>
                 <p className="mt-2 text-sm font-medium">{PHONE_DISPLAY}</p>
               </div>
               <div className="rounded-xl border border-border bg-background p-5 text-left">
                 <div className="flex items-center gap-2 text-xs uppercase tracking-widest text-muted-foreground">
+                  <Phone className="h-3.5 w-3.5 text-[var(--gold-deep)]" /> {t.contactFax}
+                </div>
+                <p className="mt-2 text-sm font-medium">{t.contactFaxVal}</p>
+              </div>
+              <div className="rounded-xl border border-border bg-background p-5 text-left">
+                <div className="flex items-center gap-2 text-xs uppercase tracking-widest text-muted-foreground">
                   <Mail className="h-3.5 w-3.5 text-[var(--gold-deep)]" /> {t.contactEmail}
                 </div>
-                <p className="mt-2 text-sm font-medium">hcservicesfinancial@gmail.com</p>
+                <a href="mailto:HCSERVICESFINANCIAL@GMAIL.COM" className="mt-2 block text-sm font-medium hover:opacity-70 transition-opacity">HCSERVICESFINANCIAL@GMAIL.COM</a>
+              </div>
+              <div className="rounded-xl border border-border bg-background p-5 text-left">
+                <div className="flex items-center gap-2 text-xs uppercase tracking-widest text-muted-foreground">
+                  <Clock className="h-3.5 w-3.5 text-[var(--gold-deep)]" /> {t.contactHours}
+                </div>
+                <p className="mt-2 text-sm font-medium whitespace-pre-line">{t.contactHoursVal}</p>
               </div>
               <div className="rounded-xl border border-border bg-background p-5 text-left">
                 <div className="flex items-center gap-2 text-xs uppercase tracking-widest text-muted-foreground">
@@ -387,12 +405,6 @@ function Index() {
                 <p className="mt-2 text-sm font-medium">{t.contactLocationVal}</p>
                 <p className="mt-1 text-xs text-muted-foreground">{t.contactLocationSub}</p>
                 <p className="mt-2 text-xs font-medium text-[var(--gold-deep)]">{t.contactRemote}</p>
-              </div>
-              <div className="rounded-xl border border-border bg-background p-5 text-left">
-                <div className="flex items-center gap-2 text-xs uppercase tracking-widest text-muted-foreground">
-                  <Clock className="h-3.5 w-3.5 text-[var(--gold-deep)]" /> {t.contactHours}
-                </div>
-                <p className="mt-2 text-sm font-medium whitespace-pre-line">{t.contactHoursVal}</p>
               </div>
             </div>
             <div className="mt-10 flex justify-center md:hidden">
