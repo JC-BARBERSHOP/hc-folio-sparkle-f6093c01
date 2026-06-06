@@ -47,7 +47,8 @@ type Lang = "en" | "es";
 const translations = {
   en: {
     navAbout: "About", navServices: "Services", navWhy: "Why Us", navContact: "Contact",
-    heroTagline: "Income Tax Services • Immigration • Health Insurance",
+    heroTagline: "IMMIGRATION  |  INCOME TAX SERVICES  |  HEALTH INSURANCE",
+    heroNotary: "NOTARY PUBLIC",
     heroDesc: "At HC Services Financial, we provide trusted tax preparation and accounting support for individuals, families, and business owners. We also assist with immigration document preparation, health insurance enrollment, and important financial paperwork. Our goal is to make every process clear, organized, and stress-free while providing personalized guidance you can trust.",
     btnCall: "Call", btnWhatsApp: "WhatsApp",
     heroTrustLine: "Remote Services Available • In-Office Appointments by Request",
@@ -98,7 +99,8 @@ const translations = {
   },
   es: {
     navAbout: "Nosotros", navServices: "Servicios", navWhy: "Por Qué Nosotros", navContact: "Contacto",
-    heroTagline: "Servicios de Impuestos • Inmigración • Seguro Médico",
+    heroTagline: "INMIGRACIÓN  |  SERVICIOS DE IMPUESTOS  |  SEGURO MÉDICO",
+    heroNotary: "NOTARÍA PÚBLICA",
     heroDesc: "En HC Services Financial, brindamos preparación de impuestos y apoyo contable confiable para personas, familias y dueños de negocio. También ayudamos con la preparación de documentos de inmigración, inscripción a seguros médicos y documentación financiera importante. Nuestro objetivo es hacer cada proceso claro, organizado y sin estrés, brindándole orientación personalizada en la que puede confiar.",
     btnCall: "Llamar", btnWhatsApp: "WhatsApp",
     heroTrustLine: "Servicios Remotos Disponibles • Citas en Oficina Bajo Solicitud",
@@ -211,12 +213,24 @@ function Index() {
         <section className="relative overflow-hidden">
           <div className="mx-auto flex max-w-6xl flex-col items-center px-6 py-16 text-center lg:py-28">
             <div className="mb-14 flex flex-col items-center">
-              <img src={hcLogo.url} alt="HC Services Financial logo" width={120} height={120} className="h-24 w-24 rounded-full object-cover sm:h-28 sm:w-28" />
-              <h2 className="mt-6 text-lg font-bold uppercase tracking-[0.25em] sm:text-xl">
+              <img
+                src={hcLogo.url}
+                alt="HC Services Financial logo"
+                width={256}
+                height={256}
+                decoding="async"
+                loading="eager"
+                className="h-24 w-24 rounded-full object-cover sm:h-28 sm:w-28 [image-rendering:auto]"
+                style={{ imageRendering: "-webkit-optimize-contrast" }}
+              />
+              <h2 className="mt-4 text-2xl font-extrabold uppercase tracking-[0.18em] sm:text-3xl">
                 HC Services Financial
               </h2>
-              <p className="mt-3 text-xs tracking-wide text-muted-foreground sm:text-sm">
+              <p className="mt-2 text-xs font-medium tracking-[0.2em] text-muted-foreground sm:text-sm">
                 {t.heroTagline}
+              </p>
+              <p className="mt-2 text-sm font-bold uppercase tracking-[0.22em] sm:text-base">
+                {t.heroNotary}
               </p>
             </div>
             <p className="max-w-2xl text-lg leading-[1.85] text-muted-foreground sm:text-xl">
