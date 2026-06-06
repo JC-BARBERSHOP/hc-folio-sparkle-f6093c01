@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import hcLogo from "@/assets/hc-logo-new.jpg.asset.json";
 import {
-  FileText, Briefcase, FileSignature, HeartPulse,
+  Calculator, Globe, FileCheck, HeartPulse,
   Phone, Mail, MapPin, Clock, Check, MessageCircle,
 } from "lucide-react";
 
@@ -63,15 +63,21 @@ const translations = {
     aboutWhy5: "Fast and responsive communication",
     aboutWhy6: "Professional guidance you can trust",
     servicesLabel: "Services",
-    servicesTitle: "What We Do",
-    svcImmTitle: "Immigration",
-    svcImmDesc: "Green card applications, family petitions, asylum paperwork, and passport services with careful, personalized attention.",
-    svcTaxTitle: "Income Tax Services",
-    svcTaxDesc: "Personal and business tax filing, IRS correspondence, and sales tax handled with accuracy and care.",
+    servicesTitle: "Our Services",
+    servicesSubtitle: "Professional support for individuals, families, and businesses — available remotely or by appointment.",
+    svcTaxTitle: "Tax Services",
+    svcTaxDesc: "Professional tax and accounting services for individuals, families, self-employed professionals, and businesses.",
+    svcTaxItems: ["Personal Income Tax Returns", "Corporate Tax Returns", "Sales Tax Filing", "Accounting & Bookkeeping Services", "Corporation Formation (New Business Setup)", "Corporate Renewals & Annual Filings", "ITIN Applications"],
+    svcNotaryTitle: "Notary Public Services",
+    svcNotaryDesc: "Official document certification and notary services for personal and business needs.",
+    svcNotaryItems: ["Notarizations", "Document Certifications", "Letters & Affidavits", "General Notary Services"],
+    svcImmTitle: "Immigration Document Preparation",
+    svcImmDesc: "Professional assistance with immigration paperwork preparation and document processing.",
+    svcImmItems: ["Family Petitions", "Green Card Renewals", "Removal of Conditions on Residence", "Work Permit Applications", "Work Permit Renewals", "Adjustment of Status Applications", "Asylum Applications", "Certified Translations", "Document Notarizations"],
+    svcImmDisclaimer: "HC Services Financial provides immigration document preparation assistance and is not a law firm. Legal representation is not provided.",
     svcHealthTitle: "Health Insurance",
-    svcHealthDesc: "Enrollment support for marketplace health insurance plans and Obamacare coverage for you and your family.",
-    svcBizTitle: "Business & Financial Documents",
-    svcBizDesc: "LLC and corporation formation, business compliance, and ongoing financial document support.",
+    svcHealthDesc: "Assistance with health insurance enrollment and coverage options for individuals and families.",
+    svcHealthItems: ["Affordable Care Act (ObamaCare) Enrollment", "Health Insurance Applications", "Coverage Renewals", "Family Health Insurance Assistance"],
     whyLabel: "Why Choose Us",
     whyTitle: "Trusted, personal, and bilingual",
     why1: "Experienced tax professionals",
@@ -107,14 +113,20 @@ const translations = {
     aboutWhy6: "Orientación profesional en la que puede confiar",
     servicesLabel: "Servicios",
     servicesTitle: "Nuestros Servicios",
-    svcImmTitle: "Inmigración",
-    svcImmDesc: "Solicitudes de residencia, peticiones familiares, asilo y pasaportes con atención cuidadosa y personalizada.",
+    servicesSubtitle: "Apoyo profesional para personas, familias y negocios — disponible de forma remota o con cita.",
     svcTaxTitle: "Servicios de Impuestos",
-    svcTaxDesc: "Declaración de impuestos personales y de negocio, correspondencia con el IRS y ventas con precisión y cuidado.",
+    svcTaxDesc: "Servicios profesionales de impuestos y contabilidad para personas, familias, profesionales independientes y negocios.",
+    svcTaxItems: ["Declaraciones de Impuestos Personales", "Declaraciones de Impuestos Corporativos", "Presentación de Impuestos sobre Ventas", "Contabilidad y Teneduría de Libros", "Formación de Corporaciones (Nuevos Negocios)", "Renovaciones Corporativas y Presentaciones Anuales", "Solicitudes de ITIN"],
+    svcNotaryTitle: "Servicios de Notario Público",
+    svcNotaryDesc: "Certificación oficial de documentos y servicios notariales para necesidades personales y de negocios.",
+    svcNotaryItems: ["Notarizaciones", "Certificaciones de Documentos", "Cartas y Declaraciones Juradas", "Servicios Generales de Notario"],
+    svcImmTitle: "Preparación de Documentos de Inmigración",
+    svcImmDesc: "Asistencia profesional con la preparación de documentos de inmigración y procesamiento de trámites.",
+    svcImmItems: ["Peticiones Familiares", "Renovaciones de Tarjeta de Residencia", "Remoción de Condiciones de Residencia", "Solicitudes de Permiso de Trabajo", "Renovaciones de Permiso de Trabajo", "Solicitudes de Ajuste de Estatus", "Solicitudes de Asilo", "Traducciones Certificadas", "Notarizaciones de Documentos"],
+    svcImmDisclaimer: "HC Services Financial brinda asistencia en la preparación de documentos de inmigración. No somos un bufete de abogados y no ofrecemos representación legal.",
     svcHealthTitle: "Seguro Médico",
-    svcHealthDesc: "Apoyo para inscribirse en seguros médicos del mercado y cobertura de Obamacare para usted y su familia.",
-    svcBizTitle: "Negocios y Documentos Financieros",
-    svcBizDesc: "Formación de LLC y corporaciones, cumplimiento de negocios y apoyo continuo con documentos financieros.",
+    svcHealthDesc: "Asistencia con la inscripción a seguros médicos y opciones de cobertura para personas y familias.",
+    svcHealthItems: ["Inscripción al Affordable Care Act (ObamaCare)", "Solicitudes de Seguro Médico", "Renovaciones de Cobertura", "Asistencia Familiar con Seguro Médico"],
     whyLabel: "Por Qué Elegirnos",
     whyTitle: "Confiables, personales y bilingües",
     why1: "Profesionales de impuestos con experiencia",
@@ -150,11 +162,11 @@ function Index() {
     { href: "#why", label: t.navWhy },
     { href: "#contact", label: t.navContact },
   ];
-  const services = [
-    { icon: FileSignature, title: t.svcImmTitle, desc: t.svcImmDesc },
-    { icon: FileText, title: t.svcTaxTitle, desc: t.svcTaxDesc },
-    { icon: HeartPulse, title: t.svcHealthTitle, desc: t.svcHealthDesc },
-    { icon: Briefcase, title: t.svcBizTitle, desc: t.svcBizDesc },
+  const serviceCategories = [
+    { icon: Calculator, title: t.svcTaxTitle, desc: t.svcTaxDesc, items: t.svcTaxItems },
+    { icon: FileCheck, title: t.svcNotaryTitle, desc: t.svcNotaryDesc, items: t.svcNotaryItems },
+    { icon: Globe, title: t.svcImmTitle, desc: t.svcImmDesc, items: t.svcImmItems, disclaimer: t.svcImmDisclaimer },
+    { icon: HeartPulse, title: t.svcHealthTitle, desc: t.svcHealthDesc, items: t.svcHealthItems },
   ];
   const whyChoose = [t.why1, t.why2, t.why3, t.why4];
   const LangToggle = ({ className = "" }: { className?: string }) => (
@@ -250,14 +262,30 @@ function Index() {
           <div className="mx-auto max-w-5xl px-6 py-24 text-center lg:py-36">
             <p className="mb-4 uppercase tracking-[0.2em] text-base text-[var(--gold-deep)]">{t.servicesLabel}</p>
             <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">{t.servicesTitle}</h2>
+            <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base">
+              {t.servicesSubtitle}
+            </p>
             <div className="mx-auto mt-14 grid max-w-4xl gap-6 text-left sm:grid-cols-2">
-              {services.map((s) => (
+              {serviceCategories.map((s) => (
                 <div key={s.title} className="rounded-xl border border-border bg-card p-6">
                   <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-foreground/5 text-[var(--gold-deep)]">
                     <s.icon className="h-5 w-5" />
                   </div>
                   <h3 className="text-lg font-semibold">{s.title}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
+                  <ul className="mt-4 space-y-1.5">
+                    {s.items.map((item) => (
+                      <li key={item} className="flex items-start gap-2 text-sm text-muted-foreground">
+                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--gold-deep)]" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  {"disclaimer" in s && s.disclaimer && (
+                    <p className="mt-4 rounded-lg bg-foreground/5 p-3 text-xs italic leading-relaxed text-muted-foreground">
+                      {s.disclaimer}
+                    </p>
+                  )}
                 </div>
               ))}
             </div>
