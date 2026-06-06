@@ -91,8 +91,10 @@ const translations = {
     contactLabel: "Contact",
     contactTitle: "Let's get your paperwork in order",
     contactDesc: "Reach out by phone or WhatsApp. We'll walk you through the next steps with no pressure.",
-    contactPhone: "Phone", contactEmail: "Email", contactLocation: "Location", contactHours: "Hours",
+    contactPhone: "Phone", contactEmail: "Email", contactLocation: "Location", contactHours: "Hours", contactFax: "Fax", contactAddress: "Address",
     contactLocationVal: "Miami, FL Area", contactHoursVal: "Monday – Friday\n9:00 AM – 5:00 PM", contactLocationSub: "Serving Miami-Dade County and surrounding areas.",
+    contactAddressVal: "7601 E Treasure Dr\nMiami Beach, FL 33141",
+    contactFaxVal: "(305) 834-4241",
     footerRights: "All rights reserved.",
     footerTagline: "Tax preparation · Business compliance · Immigration documents · Health insurance",
     stickyCall: "Call", stickyWhatsApp: "WhatsApp",
@@ -143,8 +145,10 @@ const translations = {
     contactLabel: "Contacto",
     contactTitle: "Pongamos sus documentos en orden",
     contactDesc: "Contáctenos por teléfono o WhatsApp. Le guiamos en los próximos pasos sin compromiso.",
-    contactPhone: "Teléfono", contactEmail: "Correo", contactLocation: "Ubicación", contactHours: "Horario",
+    contactPhone: "Teléfono", contactEmail: "Correo", contactLocation: "Ubicación", contactHours: "Horario", contactFax: "Fax", contactAddress: "Dirección",
     contactLocationVal: "Área de Miami, FL", contactHoursVal: "Lunes – Viernes\n9:00 AM – 5:00 PM", contactLocationSub: "Atendemos el Condado de Miami-Dade y áreas cercanas.",
+    contactAddressVal: "7601 E Treasure Dr\nMiami Beach, FL 33141",
+    contactFaxVal: "(305) 834-4241",
     footerRights: "Todos los derechos reservados.",
     footerTagline: "Preparación de impuestos · Cumplimiento de negocios · Documentos de inmigración · Seguro médico",
     stickyCall: "Llamar", stickyWhatsApp: "WhatsApp",
@@ -223,13 +227,13 @@ function Index() {
                 className="h-24 w-24 rounded-full object-cover sm:h-28 sm:w-28 [image-rendering:auto]"
                 style={{ imageRendering: "-webkit-optimize-contrast" }}
               />
-              <h2 className="mt-4 text-2xl font-extrabold uppercase tracking-[0.18em] sm:text-3xl">
+              <h2 className="mt-2 text-2xl font-extrabold uppercase tracking-[0.18em] sm:text-3xl">
                 HC Services Financial
               </h2>
               <p className="mt-2 text-xs font-medium tracking-[0.2em] text-muted-foreground sm:text-sm">
                 {t.heroTagline}
               </p>
-              <p className="mt-2 text-sm font-bold uppercase tracking-[0.22em] sm:text-base">
+              <p className="mt-2 text-xs font-bold uppercase tracking-[0.22em] sm:text-sm">
                 {t.heroNotary}
               </p>
             </div>
@@ -366,15 +370,33 @@ function Index() {
             <div className="mx-auto mt-14 grid max-w-2xl gap-4 sm:grid-cols-2">
               <div className="rounded-xl border border-border bg-background p-5 text-left">
                 <div className="flex items-center gap-2 text-xs uppercase tracking-widest text-muted-foreground">
+                  <MapPin className="h-3.5 w-3.5 text-[var(--gold-deep)]" /> {t.contactAddress}
+                </div>
+                <p className="mt-2 text-sm font-medium whitespace-pre-line">{t.contactAddressVal}</p>
+              </div>
+              <div className="rounded-xl border border-border bg-background p-5 text-left">
+                <div className="flex items-center gap-2 text-xs uppercase tracking-widest text-muted-foreground">
                   <Phone className="h-3.5 w-3.5 text-[var(--gold-deep)]" /> {t.contactPhone}
                 </div>
                 <p className="mt-2 text-sm font-medium">{PHONE_DISPLAY}</p>
               </div>
               <div className="rounded-xl border border-border bg-background p-5 text-left">
                 <div className="flex items-center gap-2 text-xs uppercase tracking-widest text-muted-foreground">
+                  <Phone className="h-3.5 w-3.5 text-[var(--gold-deep)]" /> {t.contactFax}
+                </div>
+                <p className="mt-2 text-sm font-medium">{t.contactFaxVal}</p>
+              </div>
+              <div className="rounded-xl border border-border bg-background p-5 text-left">
+                <div className="flex items-center gap-2 text-xs uppercase tracking-widest text-muted-foreground">
                   <Mail className="h-3.5 w-3.5 text-[var(--gold-deep)]" /> {t.contactEmail}
                 </div>
-                <p className="mt-2 text-sm font-medium">hcservicesfinancial@gmail.com</p>
+                <a href="mailto:HCSERVICESFINANCIAL@GMAIL.COM" className="mt-2 block text-sm font-medium hover:opacity-70 transition-opacity">HCSERVICESFINANCIAL@GMAIL.COM</a>
+              </div>
+              <div className="rounded-xl border border-border bg-background p-5 text-left">
+                <div className="flex items-center gap-2 text-xs uppercase tracking-widest text-muted-foreground">
+                  <Clock className="h-3.5 w-3.5 text-[var(--gold-deep)]" /> {t.contactHours}
+                </div>
+                <p className="mt-2 text-sm font-medium whitespace-pre-line">{t.contactHoursVal}</p>
               </div>
               <div className="rounded-xl border border-border bg-background p-5 text-left">
                 <div className="flex items-center gap-2 text-xs uppercase tracking-widest text-muted-foreground">
@@ -383,12 +405,6 @@ function Index() {
                 <p className="mt-2 text-sm font-medium">{t.contactLocationVal}</p>
                 <p className="mt-1 text-xs text-muted-foreground">{t.contactLocationSub}</p>
                 <p className="mt-2 text-xs font-medium text-[var(--gold-deep)]">{t.contactRemote}</p>
-              </div>
-              <div className="rounded-xl border border-border bg-background p-5 text-left">
-                <div className="flex items-center gap-2 text-xs uppercase tracking-widest text-muted-foreground">
-                  <Clock className="h-3.5 w-3.5 text-[var(--gold-deep)]" /> {t.contactHours}
-                </div>
-                <p className="mt-2 text-sm font-medium whitespace-pre-line">{t.contactHoursVal}</p>
               </div>
             </div>
             <div className="mt-10 flex justify-center md:hidden">
