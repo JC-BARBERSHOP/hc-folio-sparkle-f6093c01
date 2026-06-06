@@ -182,7 +182,7 @@ function Index() {
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
           <a href="#top" className="flex items-center gap-2.5">
             <img src={hcLogo.url} alt="HC Services Financial logo" width={40} height={40} className="h-10 w-10 rounded-full object-cover ring-1 ring-foreground/10" />
-            <span className="hidden text-sm font-semibold tracking-wide sm:block">HC Services Financial</span>
+            <span className="text-xs font-semibold tracking-wide sm:text-sm">HC Services Financial</span>
           </a>
           <nav className="hidden items-center gap-8 md:flex">
             {nav.map((n) => (
