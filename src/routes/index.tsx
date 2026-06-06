@@ -191,9 +191,9 @@ function Index() {
       {/* Header */}
       <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-md">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-          <a href="#top" className="flex items-center gap-2.5">
-            <img src={hcLogo.url} alt="HC Services Financial logo" width={40} height={40} className="h-10 w-10 rounded-full object-cover ring-1 ring-foreground/10" />
-            <span className="text-xs font-semibold tracking-wide sm:text-sm">HC Services Financial</span>
+          <a href="#top" className="flex items-center gap-3">
+            <img src={hcLogo.url} alt="HC Services Financial logo" width={48} height={48} className="h-12 w-12 rounded-full object-cover ring-1 ring-foreground/10" />
+            <span className="text-sm font-semibold tracking-wide sm:text-base">HC Services Financial</span>
           </a>
           <nav className="hidden items-center gap-8 md:flex">
             {nav.map((n) => (
