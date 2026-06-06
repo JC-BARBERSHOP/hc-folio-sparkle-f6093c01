@@ -219,13 +219,29 @@ function Index() {
         {/* About */}
         <section id="about" className="border-t border-border/60 bg-card">
           <div className="mx-auto max-w-4xl px-6 py-20 text-center lg:py-28">
-            <p className="mb-4 uppercase tracking-[0.2em] text-base">{t.aboutLabel}</p>
+            <p className="mb-4 uppercase tracking-[0.2em] text-base text-[var(--gold-deep)]">{t.aboutLabel}</p>
             <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
               {t.aboutTitle}
             </h2>
-            <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-              {t.aboutDesc}
-            </p>
+            <div className="mx-auto mt-8 max-w-2xl space-y-5 text-lg leading-relaxed text-muted-foreground">
+              <p>{t.aboutP1}</p>
+              <p>{t.aboutP2}</p>
+              <p>{t.aboutP3}</p>
+              <p>{t.aboutP4}</p>
+            </div>
+            <div className="mx-auto mt-16 max-w-2xl">
+              <h3 className="text-xl font-semibold tracking-tight">{t.aboutWhyTitle}</h3>
+              <ul className="mx-auto mt-8 grid max-w-xl gap-4 text-left sm:grid-cols-2">
+                {[t.aboutWhy1, t.aboutWhy2, t.aboutWhy3, t.aboutWhy4, t.aboutWhy5, t.aboutWhy6].map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-sm">
+                    <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[var(--gold)]/15 text-[var(--gold-deep)]">
+                      <Check className="h-3 w-3" />
+                    </span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </section>
 
