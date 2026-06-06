@@ -182,8 +182,8 @@ function Index() {
   const whyChoose = [t.why1, t.why2, t.why3, t.why4];
   const LangToggle = ({ className = "" }: { className?: string }) => (
     <div className={`inline-flex items-center rounded-full border border-foreground/15 bg-background/60 p-0.5 text-xs ${className}`}>
-      <button onClick={() => changeLang("en")} aria-pressed={lang === "en"} className={`rounded-full px-2.5 py-1 font-medium transition-colors ${lang === "en" ? "bg-foreground text-background" : "text-muted-foreground hover:text-foreground"}`}>EN</button>
-      <button onClick={() => changeLang("es")} aria-pressed={lang === "es"} className={`rounded-full px-2.5 py-1 font-medium transition-colors ${lang === "es" ? "bg-foreground text-background" : "text-muted-foreground hover:text-foreground"}`}>ES</button>
+      <button onClick={() => changeLang("en")} aria-pressed={lang === "en"} className={`rounded-full px-2 py-0.5 font-medium transition-colors sm:px-2.5 sm:py-1 ${lang === "en" ? "bg-foreground text-background" : "text-muted-foreground hover:text-foreground"}`}>EN</button>
+      <button onClick={() => changeLang("es")} aria-pressed={lang === "es"} className={`rounded-full px-2 py-0.5 font-medium transition-colors sm:px-2.5 sm:py-1 ${lang === "es" ? "bg-foreground text-background" : "text-muted-foreground hover:text-foreground"}`}>ES</button>
     </div>
   );
   return (
