@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import hcLogo from "@/assets/hc-logo-new.jpg.asset.json";
+import workspaceImage from "@/assets/professional-workspace.jpg.asset.json";
 import {
   Calculator, Globe, FileCheck, HeartPulse,
   Phone, Mail, MapPin, Clock, Check, MessageCircle,
@@ -224,6 +225,22 @@ function Index() {
               <a href={`tel:${PHONE_TEL}`} className="inline-flex h-12 items-center justify-center rounded-md border border-foreground/15 bg-transparent px-6 text-sm font-medium text-foreground transition-colors hover:bg-foreground/5">
                 <Phone className="mr-2 h-4 w-4 text-[var(--gold-deep)]" /> {t.btnCall} {PHONE_DISPLAY}
               </a>
+            </div>
+          </div>
+        </section>
+
+        {/* Professional image */}
+        <section className="border-t border-border/60">
+          <div className="mx-auto max-w-4xl px-6 py-16 lg:py-24">
+            <div className="overflow-hidden rounded-2xl border border-border/60 shadow-lg shadow-foreground/5">
+              <img
+                src={workspaceImage.url}
+                alt="Professional tax preparer reviewing income tax forms, immigration documents, and financial paperwork at a warmly lit desk"
+                width={1920}
+                height={1080}
+                loading="lazy"
+                className="h-auto w-full object-cover"
+              />
             </div>
           </div>
         </section>
