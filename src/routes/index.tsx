@@ -95,8 +95,8 @@ const translations = {
   },
   es: {
     navAbout: "Nosotros", navServices: "Servicios", navWhy: "Por Qué Nosotros", navContact: "Contacto",
-    heroTagline: "Inmigración • Servicios de Impuestos • Seguro Médico",
-    heroDesc: "En HC Services Financial, brindamos apoyo confiable a personas, familias y dueños de negocio que necesitan ayuda con trámites de inmigración, servicios de impuestos, seguro médico y documentos financieros importantes. Nuestro objetivo es hacer cada proceso claro, organizado y más fácil de manejar con orientación personal en la que puede confiar.",
+    heroTagline: "Servicios de Impuestos • Inmigración • Seguro Médico",
+    heroDesc: "En HC Services Financial, brindamos preparación de impuestos y apoyo contable confiable para personas, familias y dueños de negocio. También ayudamos con la preparación de documentos de inmigración, inscripción a seguros médicos y documentación financiera importante. Nuestro objetivo es hacer cada proceso claro, organizado y sin estrés, brindándole orientación personalizada en la que puede confiar.",
     btnCall: "Llamar", btnWhatsApp: "WhatsApp",
     aboutLabel: "Nosotros",
     aboutTitle: "Sobre HC Services Financial",
