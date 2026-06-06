@@ -100,7 +100,7 @@ const translations = {
     btnCall: "Llamar", btnWhatsApp: "WhatsApp",
     aboutLabel: "Nosotros",
     aboutTitle: "Sobre HC Services Financial",
-    aboutP1: "En HC Services Financial, brindamos apoyo confiable a personas, familias y dueños de negocio que necesitan ayuda con trámites de inmigración, servicios de impuestos, inscripción a seguros médicos y documentos financieros importantes.",
+    aboutP1: "En HC Services Financial, brindamos preparación de impuestos y apoyo contable confiable para personas, familias y dueños de negocio. También ayudamos con trámites de inmigración, inscripción a seguros médicos y documentos financieros importantes.",
     aboutP2: "Entendemos que muchos clientes prefieren comodidad y flexibilidad, por eso la mayoría de nuestros servicios se pueden completar de forma remota. Ya sea que se encuentre en Miami o en cualquier otro lugar, podemos atenderle por teléfono, correo electrónico, WhatsApp y compartición segura de documentos, haciendo el proceso simple y eficiente desde la comodidad de su hogar u oficina.",
     aboutP3: "Para los clientes que prefieren atención cara a cara, también ofrecemos citas en oficina previa cita.",
     aboutP4: "Nuestro objetivo es hacer cada proceso claro, organizado y sin estrés, brindándole la atención personalizada y la orientación profesional que usted merece.",
