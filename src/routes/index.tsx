@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import heroImage from "@/assets/hero-consultant.jpg";
-import hcLogo from "@/assets/hc-logo.jpeg.asset.json";
+import hcLogo from "@/assets/hc-logo-new.jpg.asset.json";
 import {
   FileText, Briefcase, FileSignature, HeartPulse,
   Phone, Mail, MapPin, Clock, Check, MessageCircle,
@@ -47,7 +47,7 @@ type Lang = "en" | "es";
 const translations = {
   en: {
     navAbout: "About", navTax: "Tax", navBusiness: "Business", navImmigration: "Immigration", navHealth: "Health", navContact: "Contact",
-    heroBadge: "Trusted financial & filing services",
+    heroTagline: "Immigration • Income Tax Services • Health Insurance",
     heroTitle1: "Professional Tax Preparation, Business Compliance & ",
     heroTitleAccent: "Immigration Services",
     heroDesc: "At HC Services Financial, we believe every family and business deserves trusted guidance when it comes to taxes, immigration, and financial services. We take the time to understand your unique needs and provide personalized support every step of the way. Whether you're filing taxes, starting a business, handling immigration paperwork, or enrolling in health insurance, we're here to make the process simple, clear, and stress-free.",
@@ -87,7 +87,7 @@ const translations = {
   },
   es: {
     navAbout: "Nosotros", navTax: "Impuestos", navBusiness: "Negocios", navImmigration: "Inmigración", navHealth: "Salud", navContact: "Contacto",
-    heroBadge: "Servicios financieros y de trámites de confianza",
+    heroTagline: "Inmigración • Servicios de Impuestos • Seguro Médico",
     heroTitle1: "Preparación Profesional de Impuestos, Cumplimiento de Negocios y ",
     heroTitleAccent: "Servicios de Inmigración",
     heroDesc: "En HC Services Financial creemos que cada familia y cada negocio merece orientación confiable en temas de impuestos, inmigración y servicios financieros. Nos tomamos el tiempo para entender sus necesidades y le brindamos atención personalizada en cada paso. Ya sea que necesite declarar impuestos, abrir un negocio, preparar documentos de inmigración o inscribirse en un seguro médico, estamos aquí para que el proceso sea sencillo, claro y sin estrés.",
@@ -184,9 +184,14 @@ function Index() {
         {/* Hero */}
         <section className="relative overflow-hidden">
           <div className="mx-auto flex max-w-6xl flex-col items-center px-6 py-20 text-center lg:py-28">
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-card px-3 py-1 text-xs uppercase tracking-widest text-muted-foreground">
-              <span className="h-1.5 w-1.5 rounded-full bg-[var(--gold)]" />
-              {t.heroBadge}
+            <div className="mb-10 flex flex-col items-center">
+              <img src={hcLogo.url} alt="HC Services Financial logo" width={120} height={120} className="h-24 w-24 rounded-full object-cover sm:h-28 sm:w-28" />
+              <h2 className="mt-5 text-base font-semibold uppercase tracking-[0.25em] sm:text-lg">
+                HC Services Financial
+              </h2>
+              <p className="mt-2 text-xs tracking-wide text-muted-foreground sm:text-sm">
+                {t.heroTagline}
+              </p>
             </div>
             <h1 className="max-w-4xl text-4xl font-semibold leading-[1.1] tracking-tight sm:text-5xl lg:text-6xl">
               {t.heroTitle1}<span className="italic text-[var(--gold-deep)] font-serif">{t.heroTitleAccent}</span>
@@ -195,11 +200,11 @@ function Index() {
               {t.heroDesc}
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-3">
-              <a href={`tel:${PHONE_TEL}`} className="inline-flex h-12 items-center justify-center rounded-md bg-foreground px-6 text-sm font-medium text-background transition-opacity hover:opacity-90">
-                <Phone className="mr-2 h-4 w-4" /> {t.btnCall} {PHONE_DISPLAY}
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="inline-flex h-12 items-center justify-center rounded-md bg-foreground px-6 text-sm font-medium text-background transition-opacity hover:opacity-90">
+                <MessageCircle className="mr-2 h-4 w-4 text-[#25D366]" /> {t.btnWhatsApp} {PHONE_DISPLAY}
               </a>
-              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="inline-flex h-12 items-center justify-center rounded-md border border-foreground/15 bg-transparent px-6 text-sm font-medium text-foreground transition-colors hover:bg-foreground/5">
-                <MessageCircle className="mr-2 h-3.5 w-3.5 text-[#25D366]" /> {t.btnWhatsApp} {PHONE_DISPLAY}
+              <a href={`tel:${PHONE_TEL}`} className="inline-flex h-12 items-center justify-center rounded-md border border-foreground/15 bg-transparent px-6 text-sm font-medium text-foreground transition-colors hover:bg-foreground/5">
+                <Phone className="mr-2 h-4 w-4 text-[var(--gold-deep)]" /> {t.btnCall} {PHONE_DISPLAY}
               </a>
             </div>
             <div className="mt-10 flex flex-wrap justify-center gap-x-8 gap-y-3 text-sm text-muted-foreground">
@@ -319,11 +324,11 @@ function Index() {
               {t.contactDesc}
             </p>
             <div className="mt-10 flex flex-wrap justify-center gap-3">
-              <a href={`tel:${PHONE_TEL}`} className="inline-flex h-12 items-center justify-center rounded-md bg-foreground px-6 text-sm font-medium text-background transition-opacity hover:opacity-90">
-                <Phone className="mr-2 h-4 w-4" /> {t.btnCall} {PHONE_DISPLAY}
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="inline-flex h-12 items-center justify-center rounded-md bg-foreground px-6 text-sm font-medium text-background transition-opacity hover:opacity-90">
+                <MessageCircle className="mr-2 h-4 w-4 text-[#25D366]" /> {t.btnWhatsApp} {PHONE_DISPLAY}
               </a>
-              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="inline-flex h-12 items-center justify-center rounded-md border border-foreground/15 px-6 text-sm font-medium transition-colors hover:bg-foreground/5">
-                <MessageCircle className="mr-2 h-3.5 w-3.5 text-[#25D366]" /> {t.btnWhatsApp}
+              <a href={`tel:${PHONE_TEL}`} className="inline-flex h-12 items-center justify-center rounded-md border border-foreground/15 px-6 text-sm font-medium transition-colors hover:bg-foreground/5">
+                <Phone className="mr-2 h-4 w-4 text-[var(--gold-deep)]" /> {t.btnCall} {PHONE_DISPLAY}
               </a>
             </div>
             <div className="mx-auto mt-14 grid max-w-2xl gap-4 sm:grid-cols-2">
@@ -373,22 +378,22 @@ function Index() {
       {/* Sticky mobile call button */}
       <div className="fixed bottom-4 left-4 right-4 z-50 flex gap-2 md:hidden">
         <a
-          href={`tel:${PHONE_TEL}`}
-          className="flex h-14 flex-1 items-center justify-center gap-2 rounded-full bg-foreground text-background shadow-lg shadow-foreground/20 transition-opacity hover:opacity-90"
-          aria-label={`Call ${PHONE_DISPLAY}`}
-        >
-          <Phone className="h-5 w-5 text-[var(--gold)]" />
-          <span className="text-sm font-semibold">{t.stickyCall}</span>
-        </a>
-        <a
           href={WHATSAPP_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex h-14 flex-1 items-center justify-center gap-2 rounded-full border border-foreground/15 bg-background text-foreground shadow-lg shadow-foreground/20 transition-colors hover:bg-foreground/5"
+          className="flex h-14 flex-1 items-center justify-center gap-2 rounded-full bg-foreground text-background shadow-lg shadow-foreground/20 transition-opacity hover:opacity-90"
           aria-label="Chat on WhatsApp"
         >
-          <MessageCircle className="h-4 w-4 text-[#25D366]" />
+          <MessageCircle className="h-5 w-5 text-[#25D366]" />
           <span className="text-sm font-semibold">{t.stickyWhatsApp}</span>
+        </a>
+        <a
+          href={`tel:${PHONE_TEL}`}
+          className="flex h-14 flex-1 items-center justify-center gap-2 rounded-full border border-foreground/15 bg-background text-foreground shadow-lg shadow-foreground/20 transition-colors hover:bg-foreground/5"
+          aria-label={`Call ${PHONE_DISPLAY}`}
+        >
+          <Phone className="h-5 w-5 text-[var(--gold-deep)]" />
+          <span className="text-sm font-semibold">{t.stickyCall}</span>
         </a>
       </div>
     </div>
