@@ -207,10 +207,10 @@ function Index() {
           <div className="mx-auto flex max-w-6xl flex-col items-center px-6 py-24 text-center lg:py-36">
             <div className="mb-10 flex flex-col items-center">
               <img src={hcLogo.url} alt="HC Services Financial logo" width={120} height={120} className="h-24 w-24 rounded-full object-cover sm:h-28 sm:w-28" />
-              <h2 className="mt-5 text-base font-semibold uppercase tracking-[0.25em] sm:text-lg">
+              <h2 className="mt-6 text-lg font-bold uppercase tracking-[0.25em] sm:text-xl">
                 HC Services Financial
               </h2>
-              <p className="mt-2 text-xs tracking-wide text-muted-foreground sm:text-sm">
+              <p className="mt-3 text-xs tracking-wide text-muted-foreground sm:text-sm">
                 {t.heroTagline}
               </p>
             </div>
