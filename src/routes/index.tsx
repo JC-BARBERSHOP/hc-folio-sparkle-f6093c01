@@ -46,8 +46,8 @@ type Lang = "en" | "es";
 const translations = {
   en: {
     navAbout: "About", navServices: "Services", navWhy: "Why Us", navContact: "Contact",
-    heroTagline: "Immigration • Income Tax Services • Health Insurance",
-    heroDesc: "At HC Services Financial, we provide trusted support for individuals, families, and business owners who need help with immigration paperwork, income tax services, health insurance, and important financial documents. Our goal is to make every process clear, organized, and easier to handle with personal guidance you can trust.",
+    heroTagline: "Income Tax Services • Immigration • Health Insurance",
+    heroDesc: "At HC Services Financial, we provide trusted tax preparation and accounting support for individuals, families, and business owners. We also assist with immigration document preparation, health insurance enrollment, and important financial paperwork. Our goal is to make every process clear, organized, and stress-free while providing personalized guidance you can trust.",
     btnCall: "Call", btnWhatsApp: "WhatsApp",
     aboutLabel: "About",
     aboutTitle: "About HC Services Financial",
