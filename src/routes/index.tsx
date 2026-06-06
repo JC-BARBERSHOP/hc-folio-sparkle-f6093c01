@@ -222,6 +222,10 @@ function Index() {
             <p className="max-w-2xl text-lg leading-[1.85] text-muted-foreground sm:text-xl">
               {t.heroDesc}
             </p>
+            <div className="mt-6 flex items-center justify-center gap-2 text-sm text-muted-foreground">
+              <Check className="h-4 w-4 text-[var(--gold-deep)]" />
+              <span>{t.heroTrustLine}</span>
+            </div>
             <div className="mt-8 flex flex-wrap justify-center gap-3">
               <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="inline-flex h-12 items-center justify-center rounded-md bg-foreground px-6 text-sm font-medium text-background transition-opacity hover:opacity-90">
                 <MessageCircle className="mr-2 h-4 w-4 text-[#25D366]" /> {t.btnWhatsApp} {PHONE_DISPLAY}
@@ -258,8 +262,6 @@ function Index() {
             </h2>
             <div className="mx-auto mt-8 max-w-2xl space-y-5 text-lg leading-relaxed text-muted-foreground">
               <p>{t.aboutP1}</p>
-              <p>{t.aboutP2}</p>
-              <p>{t.aboutP3}</p>
               <p>{t.aboutP4}</p>
             </div>
             <div className="mx-auto mt-16 max-w-2xl">
@@ -366,6 +368,7 @@ function Index() {
                 </div>
                 <p className="mt-2 text-sm font-medium">{t.contactLocationVal}</p>
                 <p className="mt-1 text-xs text-muted-foreground">{t.contactLocationSub}</p>
+                <p className="mt-2 text-xs font-medium text-[var(--gold-deep)]">{t.contactRemote}</p>
               </div>
               <div className="rounded-xl border border-border bg-background p-5 text-left">
                 <div className="flex items-center gap-2 text-xs uppercase tracking-widest text-muted-foreground">
