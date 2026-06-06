@@ -108,7 +108,7 @@ const translations = {
     heroTrustLine: "Servicios Remotos Disponibles • Citas en Oficina Bajo Solicitud",
     contactRemote: "Servicios Remotos Disponibles • Citas en el Área de Miami Bajo Solicitud",
     aboutLabel: "Nosotros",
-    aboutTitle: "Sobre HC Services Financial",
+    aboutTitle: "HC Services Financial",
     aboutP1: "En HC Services Financial, brindamos preparación de impuestos y apoyo contable confiable para personas, familias y dueños de negocio. También ayudamos con trámites de inmigración, inscripción a seguros médicos y documentos financieros importantes. La mayoría de los servicios se pueden completar de forma remota por teléfono, WhatsApp, correo electrónico y compartición segura de documentos, con citas en oficina disponibles bajo solicitud.",
     aboutP2: "Entendemos que muchos clientes prefieren comodidad y flexibilidad, por eso la mayoría de nuestros servicios se pueden completar de forma remota. Ya sea que se encuentre en Miami o en cualquier otro lugar, podemos atenderle por teléfono, correo electrónico, WhatsApp y compartición segura de documentos, haciendo el proceso simple y eficiente desde la comodidad de su hogar u oficina.",
     aboutP3: "Para los clientes que prefieren atención cara a cara, también ofrecemos citas en oficina previa cita.",
