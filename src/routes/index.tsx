@@ -230,7 +230,7 @@ function Index() {
 
         {/* About */}
         <section id="about" className="border-t border-border/60 bg-card">
-          <div className="mx-auto max-w-4xl px-6 py-20 text-center lg:py-28">
+          <div className="mx-auto max-w-4xl px-6 py-24 text-center lg:py-36">
             <p className="mb-4 uppercase tracking-[0.2em] text-base text-[var(--gold-deep)]">{t.aboutLabel}</p>
             <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
               {t.aboutTitle}
@@ -259,7 +259,7 @@ function Index() {
 
         {/* Services */}
         <section id="services" className="border-t border-border/60">
-          <div className="mx-auto max-w-5xl px-6 py-24 text-center lg:py-36">
+          <div className="mx-auto max-w-5xl px-6 py-[7.5rem] text-center lg:py-44">
             <p className="mb-4 uppercase tracking-[0.2em] text-base text-[var(--gold-deep)]">{t.servicesLabel}</p>
             <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">{t.servicesTitle}</h2>
             <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base">
@@ -294,7 +294,7 @@ function Index() {
 
         {/* Why Choose Us */}
         <section id="why" className="border-t border-border/60 bg-card">
-          <div className="mx-auto max-w-3xl px-6 py-24 text-center lg:py-36">
+          <div className="mx-auto max-w-3xl px-6 py-[7.5rem] text-center lg:py-44">
             <p className="mb-4 uppercase tracking-[0.2em] text-base text-[var(--gold-deep)]">{t.whyLabel}</p>
             <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">{t.whyTitle}</h2>
             <ul className="mx-auto mt-10 grid max-w-xl gap-4 text-left sm:grid-cols-2">
@@ -312,7 +312,7 @@ function Index() {
 
         {/* Contact */}
         <section id="contact" className="border-t border-border/60">
-          <div className="mx-auto max-w-3xl px-6 py-24 text-center lg:py-36">
+          <div className="mx-auto max-w-3xl px-6 py-[7.5rem] text-center lg:py-44">
             <p className="mb-4 uppercase tracking-[0.2em] text-base text-[var(--gold-deep)]">{t.contactLabel}</p>
             <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">{t.contactTitle}</h2>
             <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
