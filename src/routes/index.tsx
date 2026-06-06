@@ -200,7 +200,7 @@ function Index() {
               <a key={n.href} href={n.href} className="text-sm text-muted-foreground transition-colors hover:text-foreground">{n.label}</a>
             ))}
           </nav>
-          <div className="flex items-center gap-5">
+          <div className="flex items-center gap-3 sm:gap-5">
             <LangToggle />
             <a href={`tel:${PHONE_TEL}`} className="hidden items-center gap-2 text-sm font-medium transition-colors hover:opacity-70 sm:inline-flex">
               <Phone className="h-4 w-4 text-[var(--gold-deep)]" /> {PHONE_DISPLAY}
