@@ -324,11 +324,11 @@ function Index() {
               {t.contactDesc}
             </p>
             <div className="mt-10 flex flex-wrap justify-center gap-3">
-              <a href={`tel:${PHONE_TEL}`} className="inline-flex h-12 items-center justify-center rounded-md bg-foreground px-6 text-sm font-medium text-background transition-opacity hover:opacity-90">
-                <Phone className="mr-2 h-4 w-4" /> {t.btnCall} {PHONE_DISPLAY}
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="inline-flex h-12 items-center justify-center rounded-md bg-foreground px-6 text-sm font-medium text-background transition-opacity hover:opacity-90">
+                <MessageCircle className="mr-2 h-4 w-4 text-[#25D366]" /> {t.btnWhatsApp} {PHONE_DISPLAY}
               </a>
-              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="inline-flex h-12 items-center justify-center rounded-md border border-foreground/15 px-6 text-sm font-medium transition-colors hover:bg-foreground/5">
-                <MessageCircle className="mr-2 h-3.5 w-3.5 text-[#25D366]" /> {t.btnWhatsApp}
+              <a href={`tel:${PHONE_TEL}`} className="inline-flex h-12 items-center justify-center rounded-md border border-foreground/15 px-6 text-sm font-medium transition-colors hover:bg-foreground/5">
+                <Phone className="mr-2 h-4 w-4 text-[var(--gold-deep)]" /> {t.btnCall} {PHONE_DISPLAY}
               </a>
             </div>
             <div className="mx-auto mt-14 grid max-w-2xl gap-4 sm:grid-cols-2">
@@ -378,22 +378,22 @@ function Index() {
       {/* Sticky mobile call button */}
       <div className="fixed bottom-4 left-4 right-4 z-50 flex gap-2 md:hidden">
         <a
-          href={`tel:${PHONE_TEL}`}
-          className="flex h-14 flex-1 items-center justify-center gap-2 rounded-full bg-foreground text-background shadow-lg shadow-foreground/20 transition-opacity hover:opacity-90"
-          aria-label={`Call ${PHONE_DISPLAY}`}
-        >
-          <Phone className="h-5 w-5 text-[var(--gold)]" />
-          <span className="text-sm font-semibold">{t.stickyCall}</span>
-        </a>
-        <a
           href={WHATSAPP_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex h-14 flex-1 items-center justify-center gap-2 rounded-full border border-foreground/15 bg-background text-foreground shadow-lg shadow-foreground/20 transition-colors hover:bg-foreground/5"
+          className="flex h-14 flex-1 items-center justify-center gap-2 rounded-full bg-foreground text-background shadow-lg shadow-foreground/20 transition-opacity hover:opacity-90"
           aria-label="Chat on WhatsApp"
         >
-          <MessageCircle className="h-4 w-4 text-[#25D366]" />
+          <MessageCircle className="h-5 w-5 text-[#25D366]" />
           <span className="text-sm font-semibold">{t.stickyWhatsApp}</span>
+        </a>
+        <a
+          href={`tel:${PHONE_TEL}`}
+          className="flex h-14 flex-1 items-center justify-center gap-2 rounded-full border border-foreground/15 bg-background text-foreground shadow-lg shadow-foreground/20 transition-colors hover:bg-foreground/5"
+          aria-label={`Call ${PHONE_DISPLAY}`}
+        >
+          <Phone className="h-5 w-5 text-[var(--gold-deep)]" />
+          <span className="text-sm font-semibold">{t.stickyCall}</span>
         </a>
       </div>
     </div>
