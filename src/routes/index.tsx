@@ -227,7 +227,7 @@ function Index() {
                 className="h-24 w-24 rounded-full object-cover sm:h-28 sm:w-28 [image-rendering:auto]"
                 style={{ imageRendering: "-webkit-optimize-contrast" }}
               />
-              <h2 className="mt-2 text-2xl font-extrabold uppercase tracking-[0.18em] sm:text-3xl">
+              <h2 className="mt-2 text-xl font-extrabold uppercase tracking-[0.1em] sm:text-3xl sm:tracking-[0.18em]">
                 HC Services Financial
               </h2>
               <p className="mt-2 text-xs font-medium tracking-[0.2em] text-muted-foreground sm:text-sm">
