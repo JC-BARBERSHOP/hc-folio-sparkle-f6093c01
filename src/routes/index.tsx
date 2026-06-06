@@ -50,9 +50,11 @@ const translations = {
     heroTagline: "Income Tax Services • Immigration • Health Insurance",
     heroDesc: "At HC Services Financial, we provide trusted tax preparation and accounting support for individuals, families, and business owners. We also assist with immigration document preparation, health insurance enrollment, and important financial paperwork. Our goal is to make every process clear, organized, and stress-free while providing personalized guidance you can trust.",
     btnCall: "Call", btnWhatsApp: "WhatsApp",
+    heroTrustLine: "Remote Services Available • In-Office Appointments by Request",
+    contactRemote: "Remote Services Available • Miami Area Appointments by Request",
     aboutLabel: "About",
     aboutTitle: "About HC Services Financial",
-    aboutP1: "At HC Services Financial, we provide trusted tax preparation and accounting support for individuals, families, and business owners. We also assist with immigration paperwork, health insurance enrollment, and important financial documents.",
+    aboutP1: "At HC Services Financial, we provide trusted tax preparation and accounting support for individuals, families, and business owners. We also assist with immigration paperwork, health insurance enrollment, and important financial documents. Most services can be completed remotely through phone, WhatsApp, email, and secure document sharing, with in-office appointments available by request.",
     aboutP2: "We understand that many clients prefer convenience and flexibility, which is why most of our services can be completed remotely. Whether you're located in Miami or elsewhere, we can assist you through phone, email, WhatsApp, and secure document sharing, making the process simple and efficient from the comfort of your home or office.",
     aboutP3: "For clients who prefer face-to-face assistance, in-office appointments are also available by appointment.",
     aboutP4: "Our goal is to make every process clear, organized, and stress-free while providing the personalized attention and professional guidance you deserve.",
@@ -99,9 +101,11 @@ const translations = {
     heroTagline: "Servicios de Impuestos • Inmigración • Seguro Médico",
     heroDesc: "En HC Services Financial, brindamos preparación de impuestos y apoyo contable confiable para personas, familias y dueños de negocio. También ayudamos con la preparación de documentos de inmigración, inscripción a seguros médicos y documentación financiera importante. Nuestro objetivo es hacer cada proceso claro, organizado y sin estrés, brindándole orientación personalizada en la que puede confiar.",
     btnCall: "Llamar", btnWhatsApp: "WhatsApp",
+    heroTrustLine: "Servicios Remotos Disponibles • Citas en Oficina Bajo Solicitud",
+    contactRemote: "Servicios Remotos Disponibles • Citas en el Área de Miami Bajo Solicitud",
     aboutLabel: "Nosotros",
     aboutTitle: "Sobre HC Services Financial",
-    aboutP1: "En HC Services Financial, brindamos preparación de impuestos y apoyo contable confiable para personas, familias y dueños de negocio. También ayudamos con trámites de inmigración, inscripción a seguros médicos y documentos financieros importantes.",
+    aboutP1: "En HC Services Financial, brindamos preparación de impuestos y apoyo contable confiable para personas, familias y dueños de negocio. También ayudamos con trámites de inmigración, inscripción a seguros médicos y documentos financieros importantes. La mayoría de los servicios se pueden completar de forma remota por teléfono, WhatsApp, correo electrónico y compartición segura de documentos, con citas en oficina disponibles bajo solicitud.",
     aboutP2: "Entendemos que muchos clientes prefieren comodidad y flexibilidad, por eso la mayoría de nuestros servicios se pueden completar de forma remota. Ya sea que se encuentre en Miami o en cualquier otro lugar, podemos atenderle por teléfono, correo electrónico, WhatsApp y compartición segura de documentos, haciendo el proceso simple y eficiente desde la comodidad de su hogar u oficina.",
     aboutP3: "Para los clientes que prefieren atención cara a cara, también ofrecemos citas en oficina previa cita.",
     aboutP4: "Nuestro objetivo es hacer cada proceso claro, organizado y sin estrés, brindándole la atención personalizada y la orientación profesional que usted merece.",
@@ -218,6 +222,10 @@ function Index() {
             <p className="max-w-2xl text-lg leading-[1.85] text-muted-foreground sm:text-xl">
               {t.heroDesc}
             </p>
+            <div className="mt-6 flex items-center justify-center gap-2 text-sm text-muted-foreground">
+              <Check className="h-4 w-4 text-[var(--gold-deep)]" />
+              <span>{t.heroTrustLine}</span>
+            </div>
             <div className="mt-8 flex flex-wrap justify-center gap-3">
               <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="inline-flex h-12 items-center justify-center rounded-md bg-foreground px-6 text-sm font-medium text-background transition-opacity hover:opacity-90">
                 <MessageCircle className="mr-2 h-4 w-4 text-[#25D366]" /> {t.btnWhatsApp} {PHONE_DISPLAY}
@@ -254,8 +262,6 @@ function Index() {
             </h2>
             <div className="mx-auto mt-8 max-w-2xl space-y-5 text-lg leading-relaxed text-muted-foreground">
               <p>{t.aboutP1}</p>
-              <p>{t.aboutP2}</p>
-              <p>{t.aboutP3}</p>
               <p>{t.aboutP4}</p>
             </div>
             <div className="mx-auto mt-16 max-w-2xl">
@@ -362,6 +368,7 @@ function Index() {
                 </div>
                 <p className="mt-2 text-sm font-medium">{t.contactLocationVal}</p>
                 <p className="mt-1 text-xs text-muted-foreground">{t.contactLocationSub}</p>
+                <p className="mt-2 text-xs font-medium text-[var(--gold-deep)]">{t.contactRemote}</p>
               </div>
               <div className="rounded-xl border border-border bg-background p-5 text-left">
                 <div className="flex items-center gap-2 text-xs uppercase tracking-widest text-muted-foreground">
