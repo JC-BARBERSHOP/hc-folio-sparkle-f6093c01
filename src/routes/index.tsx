@@ -182,8 +182,8 @@ function Index() {
   const whyChoose = [t.why1, t.why2, t.why3, t.why4];
   const LangToggle = ({ className = "" }: { className?: string }) => (
     <div className={`inline-flex items-center rounded-full border border-foreground/15 bg-background/60 p-0.5 text-xs ${className}`}>
-      <button onClick={() => changeLang("en")} aria-pressed={lang === "en"} className={`rounded-full px-2.5 py-1 font-medium transition-colors ${lang === "en" ? "bg-foreground text-background" : "text-muted-foreground hover:text-foreground"}`}>EN</button>
-      <button onClick={() => changeLang("es")} aria-pressed={lang === "es"} className={`rounded-full px-2.5 py-1 font-medium transition-colors ${lang === "es" ? "bg-foreground text-background" : "text-muted-foreground hover:text-foreground"}`}>ES</button>
+      <button onClick={() => changeLang("en")} aria-pressed={lang === "en"} className={`rounded-full px-2 py-0.5 font-medium transition-colors sm:px-2.5 sm:py-1 ${lang === "en" ? "bg-foreground text-background" : "text-muted-foreground hover:text-foreground"}`}>EN</button>
+      <button onClick={() => changeLang("es")} aria-pressed={lang === "es"} className={`rounded-full px-2 py-0.5 font-medium transition-colors sm:px-2.5 sm:py-1 ${lang === "es" ? "bg-foreground text-background" : "text-muted-foreground hover:text-foreground"}`}>ES</button>
     </div>
   );
   return (
@@ -191,16 +191,16 @@ function Index() {
       {/* Header */}
       <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-md">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-          <a href="#top" className="flex items-center gap-3">
+          <a href="#top" className="flex items-center gap-1.5 sm:gap-3">
             <img src={hcLogo.url} alt="HC Services Financial logo" width={48} height={48} className="h-12 w-12 rounded-full object-cover ring-1 ring-foreground/10" />
-            <span className="text-sm font-semibold tracking-wide sm:text-base">HC Services Financial</span>
+            <span className="whitespace-nowrap text-xs font-semibold tracking-tight sm:text-base sm:tracking-wide">HC Services Financial</span>
           </a>
           <nav className="hidden items-center gap-8 md:flex">
             {nav.map((n) => (
               <a key={n.href} href={n.href} className="text-sm text-muted-foreground transition-colors hover:text-foreground">{n.label}</a>
             ))}
           </nav>
-          <div className="flex items-center gap-5">
+          <div className="flex items-center gap-3 sm:gap-5">
             <LangToggle />
             <a href={`tel:${PHONE_TEL}`} className="hidden items-center gap-2 text-sm font-medium transition-colors hover:opacity-70 sm:inline-flex">
               <Phone className="h-4 w-4 text-[var(--gold-deep)]" /> {PHONE_DISPLAY}
