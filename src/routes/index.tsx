@@ -54,7 +54,7 @@ const translations = {
     heroTrustLine: "Remote Services Available • In-Office Appointments by Request",
     contactRemote: "Remote Services Available • Miami Area Appointments by Request",
     aboutLabel: "About",
-    aboutTitle: "About HC Services Financial",
+    aboutTitle: "HC Services Financial",
     aboutP1: "At HC Services Financial, we provide trusted tax preparation and accounting support for individuals, families, and business owners. We also assist with immigration paperwork, health insurance enrollment, and important financial documents. Most services can be completed remotely through phone, WhatsApp, email, and secure document sharing, with in-office appointments available by request.",
     aboutP2: "We understand that many clients prefer convenience and flexibility, which is why most of our services can be completed remotely. Whether you're located in Miami or elsewhere, we can assist you through phone, email, WhatsApp, and secure document sharing, making the process simple and efficient from the comfort of your home or office.",
     aboutP3: "For clients who prefer face-to-face assistance, in-office appointments are also available by appointment.",
