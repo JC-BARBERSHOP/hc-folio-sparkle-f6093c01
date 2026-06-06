@@ -1,6 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import heroImage from "@/assets/hero-consultant.jpg";
 import hcLogo from "@/assets/hc-logo-new.jpg.asset.json";
 import {
   FileText, Briefcase, FileSignature, HeartPulse,
@@ -46,30 +45,23 @@ type Lang = "en" | "es";
 
 const translations = {
   en: {
-    navAbout: "About", navTax: "Tax", navBusiness: "Business", navImmigration: "Immigration", navHealth: "Health", navContact: "Contact",
+    navAbout: "About", navServices: "Services", navWhy: "Why Us", navContact: "Contact",
     heroTagline: "Immigration • Income Tax Services • Health Insurance",
-    heroTitle1: "Professional Tax Preparation, Business Compliance & ",
-    heroTitleAccent: "Immigration Services",
-    heroDesc: "At HC Services Financial, we believe every family and business deserves trusted guidance when it comes to taxes, immigration, and financial services. We take the time to understand your unique needs and provide personalized support every step of the way. Whether you're filing taxes, starting a business, handling immigration paperwork, or enrolling in health insurance, we're here to make the process simple, clear, and stress-free.",
+    heroDesc: "At HC Services Financial, we provide trusted support for individuals, families, and business owners who need help with immigration paperwork, income tax services, health insurance, and important financial documents. Our goal is to make every process clear, organized, and easier to handle with personal guidance you can trust.",
     btnCall: "Call", btnWhatsApp: "WhatsApp",
-    trust1: "IRS tax filing", trust2: "Business compliance", trust3: "Bilingual support",
-    heroImgAlt: "Tax preparation documents and financial paperwork with elegant gold accents",
     aboutLabel: "About",
     aboutTitle: "Trusted Guidance for Taxes, Business & Family Documents",
     aboutDesc: "HC Services Financial provides reliable support for individuals, families, and business owners who need help with tax preparation, IRS tax filing, business compliance, immigration paperwork, and health insurance enrollment. Our goal is to make the process simple, organized, and stress-free.",
-    taxLabel: "Tax Services",
-    taxTitle: "Tax Preparation & IRS Filing",
-    taxDesc: "Personal, business, and corporation tax filing handled with care. We help you stay organized, accurate, and compliant — from income tax returns to IRS correspondence and monthly sales tax filing.",
-    bizLabel: "Business Services",
-    bizTitle: "Business Setup & Compliance",
-    bizDesc: "From opening your corporation or LLC to ongoing compliance support, we guide business owners through the steps required to stay active, registered, and audit-ready.",
-    immLabel: "Immigration Services",
-    immTitle: "Immigration Document Preparation",
-    immDesc: "Careful preparation of green card applications, asylum applications, family petitions, and passport paperwork.",
-    immDisclaimer: "HC Services Financial provides document preparation assistance and is not a law firm.",
-    healthLabel: "Health Insurance",
-    healthTitle: "Health Insurance Assistance",
-    healthDesc: "Enrollment support for Obamacare and marketplace health insurance plans, with clear guidance on the right coverage for you and your family.",
+    servicesLabel: "Services",
+    servicesTitle: "What We Do",
+    svcImmTitle: "Immigration",
+    svcImmDesc: "Green card applications, family petitions, asylum paperwork, and passport services with careful, personalized attention.",
+    svcTaxTitle: "Income Tax Services",
+    svcTaxDesc: "Personal and business tax filing, IRS correspondence, and sales tax handled with accuracy and care.",
+    svcHealthTitle: "Health Insurance",
+    svcHealthDesc: "Enrollment support for marketplace health insurance plans and Obamacare coverage for you and your family.",
+    svcBizTitle: "Business & Financial Documents",
+    svcBizDesc: "LLC and corporation formation, business compliance, and ongoing financial document support.",
     whyLabel: "Why Choose Us",
     whyTitle: "Trusted, personal, and bilingual",
     why1: "Experienced tax professionals",
@@ -86,30 +78,23 @@ const translations = {
     stickyCall: "Call", stickyWhatsApp: "WhatsApp",
   },
   es: {
-    navAbout: "Nosotros", navTax: "Impuestos", navBusiness: "Negocios", navImmigration: "Inmigración", navHealth: "Salud", navContact: "Contacto",
+    navAbout: "Nosotros", navServices: "Servicios", navWhy: "Por Qué Nosotros", navContact: "Contacto",
     heroTagline: "Inmigración • Servicios de Impuestos • Seguro Médico",
-    heroTitle1: "Preparación Profesional de Impuestos, Cumplimiento de Negocios y ",
-    heroTitleAccent: "Servicios de Inmigración",
-    heroDesc: "En HC Services Financial creemos que cada familia y cada negocio merece orientación confiable en temas de impuestos, inmigración y servicios financieros. Nos tomamos el tiempo para entender sus necesidades y le brindamos atención personalizada en cada paso. Ya sea que necesite declarar impuestos, abrir un negocio, preparar documentos de inmigración o inscribirse en un seguro médico, estamos aquí para que el proceso sea sencillo, claro y sin estrés.",
+    heroDesc: "En HC Services Financial, brindamos apoyo confiable a personas, familias y dueños de negocio que necesitan ayuda con trámites de inmigración, servicios de impuestos, seguro médico y documentos financieros importantes. Nuestro objetivo es hacer cada proceso claro, organizado y más fácil de manejar con orientación personal en la que puede confiar.",
     btnCall: "Llamar", btnWhatsApp: "WhatsApp",
-    trust1: "Declaración de impuestos", trust2: "Cumplimiento de negocios", trust3: "Atención bilingüe",
-    heroImgAlt: "Documentos de preparación de impuestos y papelería financiera con detalles dorados",
     aboutLabel: "Nosotros",
     aboutTitle: "Orientación Confiable en Impuestos, Negocios y Documentos Familiares",
     aboutDesc: "HC Services Financial ofrece apoyo confiable a personas, familias y dueños de negocio que necesitan ayuda con la preparación de impuestos, declaración ante el IRS, cumplimiento de negocios, trámites de inmigración e inscripción a seguros médicos. Nuestro objetivo es que el proceso sea simple, ordenado y sin estrés.",
-    taxLabel: "Servicios de Impuestos",
-    taxTitle: "Preparación de Impuestos y Declaración al IRS",
-    taxDesc: "Preparamos con cuidado impuestos personales, de negocio y de corporación. Le ayudamos a mantenerse organizado, preciso y al día — desde declaraciones de ingresos hasta correspondencia con el IRS y declaraciones mensuales de ventas.",
-    bizLabel: "Servicios para Negocios",
-    bizTitle: "Apertura y Cumplimiento de Negocios",
-    bizDesc: "Desde abrir su corporación o LLC hasta el apoyo continuo de cumplimiento, guiamos a los dueños de negocio en los pasos necesarios para mantenerse activos, registrados y listos para cualquier auditoría.",
-    immLabel: "Servicios de Inmigración",
-    immTitle: "Preparación de Documentos de Inmigración",
-    immDesc: "Preparación cuidadosa de solicitudes de residencia, solicitudes de asilo, peticiones familiares y trámites de pasaporte.",
-    immDisclaimer: "HC Services Financial brinda asistencia en la preparación de documentos y no es una firma de abogados.",
-    healthLabel: "Seguro Médico",
-    healthTitle: "Asistencia con Seguro Médico",
-    healthDesc: "Apoyo para inscribirse en Obamacare y planes del mercado de seguros médicos, con orientación clara para elegir la cobertura adecuada para usted y su familia.",
+    servicesLabel: "Servicios",
+    servicesTitle: "Nuestros Servicios",
+    svcImmTitle: "Inmigración",
+    svcImmDesc: "Solicitudes de residencia, peticiones familiares, asilo y pasaportes con atención cuidadosa y personalizada.",
+    svcTaxTitle: "Servicios de Impuestos",
+    svcTaxDesc: "Declaración de impuestos personales y de negocio, correspondencia con el IRS y ventas con precisión y cuidado.",
+    svcHealthTitle: "Seguro Médico",
+    svcHealthDesc: "Apoyo para inscribirse en seguros médicos del mercado y cobertura de Obamacare para usted y su familia.",
+    svcBizTitle: "Negocios y Documentos Financieros",
+    svcBizDesc: "Formación de LLC y corporaciones, cumplimiento de negocios y apoyo continuo con documentos financieros.",
     whyLabel: "Por Qué Elegirnos",
     whyTitle: "Confiables, personales y bilingües",
     why1: "Profesionales de impuestos con experiencia",
@@ -141,11 +126,15 @@ function Index() {
   const t = translations[lang];
   const nav = [
     { href: "#about", label: t.navAbout },
-    { href: "#taxes", label: t.navTax },
-    { href: "#business", label: t.navBusiness },
-    { href: "#immigration", label: t.navImmigration },
-    { href: "#health", label: t.navHealth },
+    { href: "#services", label: t.navServices },
+    { href: "#why", label: t.navWhy },
     { href: "#contact", label: t.navContact },
+  ];
+  const services = [
+    { icon: FileSignature, title: t.svcImmTitle, desc: t.svcImmDesc },
+    { icon: FileText, title: t.svcTaxTitle, desc: t.svcTaxDesc },
+    { icon: HeartPulse, title: t.svcHealthTitle, desc: t.svcHealthDesc },
+    { icon: Briefcase, title: t.svcBizTitle, desc: t.svcBizDesc },
   ];
   const whyChoose = [t.why1, t.why2, t.why3, t.why4];
   const LangToggle = ({ className = "" }: { className?: string }) => (
@@ -193,10 +182,7 @@ function Index() {
                 {t.heroTagline}
               </p>
             </div>
-            <h1 className="max-w-4xl text-4xl font-semibold leading-[1.1] tracking-tight sm:text-5xl lg:text-6xl">
-              {t.heroTitle1}<span className="italic text-[var(--gold-deep)] font-serif">{t.heroTitleAccent}</span>
-            </h1>
-            <p className="mt-6 max-w-3xl text-lg leading-[1.85] text-muted-foreground sm:text-xl">
+            <p className="max-w-2xl text-lg leading-[1.85] text-muted-foreground sm:text-xl">
               {t.heroDesc}
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-3">
@@ -206,21 +192,6 @@ function Index() {
               <a href={`tel:${PHONE_TEL}`} className="inline-flex h-12 items-center justify-center rounded-md border border-foreground/15 bg-transparent px-6 text-sm font-medium text-foreground transition-colors hover:bg-foreground/5">
                 <Phone className="mr-2 h-4 w-4 text-[var(--gold-deep)]" /> {t.btnCall} {PHONE_DISPLAY}
               </a>
-            </div>
-            <div className="mt-10 flex flex-wrap justify-center gap-x-8 gap-y-3 text-sm text-muted-foreground">
-              <div className="flex items-center gap-2"><Check className="h-4 w-4 text-[var(--gold-deep)]" /> {t.trust1}</div>
-              <div className="flex items-center gap-2"><Check className="h-4 w-4 text-[var(--gold-deep)]" /> {t.trust2}</div>
-              <div className="flex items-center gap-2"><Check className="h-4 w-4 text-[var(--gold-deep)]" /> {t.trust3}</div>
-            </div>
-            <div className="relative mt-16 w-full max-w-4xl">
-              <div className="absolute -inset-6 -z-10 rounded-3xl bg-gradient-to-br from-[oklch(0.95_0.04_85)] to-transparent" />
-              <img
-                src={heroImage}
-                alt={t.heroImgAlt}
-                width={1536}
-                height={1280}
-                className="aspect-[4/3] w-full rounded-2xl border border-border object-cover shadow-[0_30px_60px_-30px_oklch(0.2_0.01_60/0.25)]"
-              />
             </div>
           </div>
         </section>
@@ -238,67 +209,27 @@ function Index() {
           </div>
         </section>
 
-        {/* Tax Services */}
-        <section id="taxes" className="border-t border-border/60">
-          <div className="mx-auto max-w-3xl px-6 py-24 text-center lg:py-36">
-            <p className="mb-4 uppercase tracking-[0.2em] text-base text-[var(--gold-deep)]">{t.taxLabel}</p>
-            <div className="mx-auto mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-foreground/5 text-[var(--gold-deep)]">
-              <FileText className="h-5 w-5" />
+        {/* Services */}
+        <section id="services" className="border-t border-border/60">
+          <div className="mx-auto max-w-5xl px-6 py-24 text-center lg:py-36">
+            <p className="mb-4 uppercase tracking-[0.2em] text-base text-[var(--gold-deep)]">{t.servicesLabel}</p>
+            <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">{t.servicesTitle}</h2>
+            <div className="mx-auto mt-14 grid max-w-4xl gap-6 text-left sm:grid-cols-2">
+              {services.map((s) => (
+                <div key={s.title} className="rounded-xl border border-border bg-card p-6">
+                  <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-foreground/5 text-[var(--gold-deep)]">
+                    <s.icon className="h-5 w-5" />
+                  </div>
+                  <h3 className="text-lg font-semibold">{s.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
+                </div>
+              ))}
             </div>
-            <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">{t.taxTitle}</h2>
-            <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
-              {t.taxDesc}
-            </p>
-          </div>
-        </section>
-
-        {/* Business Services */}
-        <section id="business" className="border-t border-border/60 bg-card">
-          <div className="mx-auto max-w-3xl px-6 py-24 text-center lg:py-36">
-            <p className="mb-4 uppercase tracking-[0.2em] text-base text-[var(--gold-deep)]">{t.bizLabel}</p>
-            <div className="mx-auto mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-foreground/5 text-[var(--gold-deep)]">
-              <Briefcase className="h-5 w-5" />
-            </div>
-            <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">{t.bizTitle}</h2>
-            <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
-              {t.bizDesc}
-            </p>
-          </div>
-        </section>
-
-        {/* Immigration Services */}
-        <section id="immigration" className="border-t border-border/60">
-          <div className="mx-auto max-w-3xl px-6 py-24 text-center lg:py-36">
-            <p className="mb-4 uppercase tracking-[0.2em] text-base text-[var(--gold-deep)]">{t.immLabel}</p>
-            <div className="mx-auto mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-foreground/5 text-[var(--gold-deep)]">
-              <FileSignature className="h-5 w-5" />
-            </div>
-            <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">{t.immTitle}</h2>
-            <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
-              {t.immDesc}
-            </p>
-            <p className="mx-auto mt-8 max-w-md text-xs italic text-muted-foreground">
-              {t.immDisclaimer}
-            </p>
-          </div>
-        </section>
-
-        {/* Health Insurance */}
-        <section id="health" className="border-t border-border/60 bg-card">
-          <div className="mx-auto max-w-3xl px-6 py-24 text-center lg:py-36">
-            <p className="mb-4 uppercase tracking-[0.2em] text-base text-[var(--gold-deep)]">{t.healthLabel}</p>
-            <div className="mx-auto mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-foreground/5 text-[var(--gold-deep)]">
-              <HeartPulse className="h-5 w-5" />
-            </div>
-            <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">{t.healthTitle}</h2>
-            <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
-              {t.healthDesc}
-            </p>
           </div>
         </section>
 
         {/* Why Choose Us */}
-        <section className="border-t border-border/60">
+        <section id="why" className="border-t border-border/60 bg-card">
           <div className="mx-auto max-w-3xl px-6 py-24 text-center lg:py-36">
             <p className="mb-4 uppercase tracking-[0.2em] text-base text-[var(--gold-deep)]">{t.whyLabel}</p>
             <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">{t.whyTitle}</h2>
@@ -316,7 +247,7 @@ function Index() {
         </section>
 
         {/* Contact */}
-        <section id="contact" className="border-t border-border/60 bg-card">
+        <section id="contact" className="border-t border-border/60">
           <div className="mx-auto max-w-3xl px-6 py-24 text-center lg:py-36">
             <p className="mb-4 uppercase tracking-[0.2em] text-base text-[var(--gold-deep)]">{t.contactLabel}</p>
             <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">{t.contactTitle}</h2>
