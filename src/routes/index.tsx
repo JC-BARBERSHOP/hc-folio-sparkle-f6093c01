@@ -1,7 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import hcLogo from "@/assets/hc-logo-new.jpg.asset.json";
-import workspaceImage from "@/assets/professional-workspace.jpg.asset.json";
+import hcLogoUrl from "@/assets/hc-logo-new.jpg";
+import workspaceImageUrl from "@/assets/professional-workspace.jpg";
+const hcLogo = { url: hcLogoUrl };
+const workspaceImage = { url: workspaceImageUrl };
 import {
   Calculator, Globe, FileCheck, HeartPulse,
   Phone, Mail, MapPin, Clock, Check, MessageCircle,
