@@ -192,7 +192,7 @@ function Index() {
       <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-md">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
           <a href="#top" className="flex items-center gap-1.5 sm:gap-3">
-            <img src={hcLogo.url} alt="HC Services Financial logo" width={48} height={48} className="h-12 w-12 rounded-full object-cover ring-1 ring-foreground/10" />
+            <img src={hcLogo} alt="HC Services Financial logo" width={48} height={48} className="h-12 w-12 rounded-full object-cover ring-1 ring-foreground/10" />
             <span className="whitespace-nowrap text-xs font-semibold tracking-tight sm:text-base sm:tracking-wide">HC Services Financial</span>
           </a>
           <nav className="hidden items-center gap-8 md:flex">
@@ -218,7 +218,7 @@ function Index() {
           <div className="mx-auto flex max-w-6xl flex-col items-center px-6 py-16 text-center lg:py-28">
             <div className="mb-14 flex flex-col items-center">
               <img
-                src={hcLogo.url}
+                src={hcLogo}
                 alt="HC Services Financial logo"
                 width={256}
                 height={256}
@@ -260,7 +260,7 @@ function Index() {
           <div className="mx-auto max-w-4xl px-6 py-16 lg:py-24">
             <div className="overflow-hidden rounded-2xl border border-border/60 shadow-lg shadow-foreground/5">
               <img
-                src={workspaceImage.url}
+                src={workspaceImage}
                 alt="Professional tax preparer reviewing income tax forms, immigration documents, and financial paperwork at a warmly lit desk"
                 width={1920}
                 height={1080}
@@ -417,7 +417,7 @@ function Index() {
       <footer className="border-t border-border/60">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 py-8 text-xs text-muted-foreground sm:flex-row">
           <div className="flex items-center gap-2">
-            <img src={hcLogo.url} alt="" width={20} height={20} className="h-5 w-5 rounded-full" />
+            <img src={hcLogo} alt="" width={20} height={20} className="h-5 w-5 rounded-full" />
             <p>© {new Date().getFullYear()} HC Services Financial. {t.footerRights}</p>
           </div>
           <p>{t.footerTagline}</p>
