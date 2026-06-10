@@ -87,8 +87,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:site", content: "@Lovable" },
       { name: "twitter:title", content: "Lovable App" },
       { name: "twitter:description", content: "HC Services Financial offers professional tax preparation, business compliance, immigration document prep, and health insurance services." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/4986ada9-1acc-493e-a22f-29af42ca2010/id-preview-0b72d225--0e80c414-8e2f-4dd0-b3c5-22269d0d2fa5.lovable.app-1780591393196.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/4986ada9-1acc-493e-a22f-29af42ca2010/id-preview-0b72d225--0e80c414-8e2f-4dd0-b3c5-22269d0d2fa5.lovable.app-1780591393196.png" },
     ],
     links: [
       {
