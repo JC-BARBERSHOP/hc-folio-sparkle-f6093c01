@@ -1,9 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import hcLogoUrl from "@/assets/hc-logo-new.jpg";
-import workspaceImageUrl from "@/assets/professional-workspace.jpg";
-const hcLogo = { url: hcLogoUrl };
-const workspaceImage = { url: workspaceImageUrl };
+import hcLogo from "@/assets/hc-logo-new.jpg";
+import workspaceImage from "@/assets/professional-workspace.jpg";
 import {
   Calculator, Globe, FileCheck, HeartPulse,
   Phone, Mail, MapPin, Clock, Check, MessageCircle,
@@ -19,7 +17,7 @@ export const Route = createFileRoute("/")({
       { property: "og:description", content: "Professional tax preparation, IRS filing, business compliance, immigration document preparation, and Obamacare enrollment. Call (646) 620-2960." },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/" },
-      { property: "og:image", content: hcLogo.url },
+      { property: "og:image", content: hcLogo },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: "/" }],
@@ -29,7 +27,7 @@ export const Route = createFileRoute("/")({
         "@context": "https://schema.org",
         "@type": "ProfessionalService",
         name: "HC Services Financial",
-        image: hcLogo.url,
+        image: hcLogo,
         telephone: "+1-646-620-2960",
         description: "Tax preparation, IRS tax filing, business compliance, immigration document preparation, and health insurance enrollment.",
         areaServed: "United States",
