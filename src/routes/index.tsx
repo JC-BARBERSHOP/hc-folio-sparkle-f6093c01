@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import hcLogo from "@/assets/hc-logo-new.jpg";
+import hcLogo from "@/assets/hc-logo-hd.png";
 import workspaceImage from "@/assets/professional-workspace.jpg";
 import {
   Calculator, Globe, FileCheck, HeartPulse,
@@ -17,7 +17,6 @@ export const Route = createFileRoute("/")({
       { property: "og:description", content: "Professional tax preparation, IRS filing, business compliance, immigration document preparation, and Obamacare enrollment. Call (646) 620-2960." },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/" },
-      { property: "og:image", content: hcLogo },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: "/" }],
