@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import hcLogo from "@/assets/hc-logo-hd.jpg";
+import hcLogo from "@/assets/hc-logo-hd.png";
 import workspaceImage from "@/assets/professional-workspace.jpg";
 import {
   Calculator, Globe, FileCheck, HeartPulse,
