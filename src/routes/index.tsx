@@ -191,7 +191,7 @@ function Index() {
       <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-md">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
           <a href="#top" className="flex items-center gap-1.5 sm:gap-3">
-            <img src={hcLogo} alt="HC Services Financial logo" width={48} height={48} className="h-12 w-12 rounded-full object-cover ring-1 ring-foreground/10" />
+            <img src={hcLogo} alt="HC Services Financial logo" width={48} height={48} className="h-[62px] w-[62px] rounded-full object-cover ring-1 ring-foreground/10" />
             <span className="whitespace-nowrap text-xs font-semibold tracking-tight sm:text-base sm:tracking-wide">HC Services Financial</span>
           </a>
           <nav className="hidden items-center gap-8 md:flex">
@@ -223,7 +223,7 @@ function Index() {
                 height={256}
                 decoding="async"
                 loading="eager"
-                className="h-24 w-24 rounded-full object-cover sm:h-28 sm:w-28 [image-rendering:auto]"
+                className="h-[125px] w-[125px] rounded-full object-cover sm:h-[146px] sm:w-[146px] [image-rendering:auto]"
                 style={{ imageRendering: "-webkit-optimize-contrast" }}
               />
               <h2 className="mt-2 text-xl font-extrabold uppercase tracking-[0.1em] sm:text-3xl sm:tracking-[0.18em]">
