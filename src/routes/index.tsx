@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import hcLogo from "@/assets/hc-logo-hd.png";
+import hcLogo from "@/assets/hc-logo-transparent.png";
 import workspaceImage from "@/assets/professional-workspace.jpg";
 import {
   Calculator, Globe, FileCheck, HeartPulse,
@@ -191,7 +191,7 @@ function Index() {
       <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-md">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
           <a href="#top" className="flex items-center gap-1.5 sm:gap-3">
-            <img src={hcLogo} alt="HC Services Financial logo" width={48} height={48} className="h-[62px] w-[62px] rounded-full object-cover ring-1 ring-foreground/10" />
+            <img src={hcLogo} alt="HC Services Financial logo" width={53} height={53} className="h-[68px] w-[68px] object-contain" />
             <span className="whitespace-nowrap text-xs font-semibold tracking-tight sm:text-base sm:tracking-wide">HC Services Financial</span>
           </a>
           <nav className="hidden items-center gap-8 md:flex">
@@ -219,11 +219,11 @@ function Index() {
               <img
                 src={hcLogo}
                 alt="HC Services Financial logo"
-                width={256}
-                height={256}
+                width={280}
+                height={280}
                 decoding="async"
                 loading="eager"
-                className="h-[125px] w-[125px] rounded-full object-cover sm:h-[146px] sm:w-[146px] [image-rendering:auto]"
+                className="h-[138px] w-[138px] object-contain sm:h-[161px] sm:w-[161px] [image-rendering:auto]"
                 style={{ imageRendering: "-webkit-optimize-contrast" }}
               />
               <h2 className="mt-2 text-xl font-extrabold uppercase tracking-[0.1em] sm:text-3xl sm:tracking-[0.18em]">
@@ -416,7 +416,7 @@ function Index() {
       <footer className="border-t border-border/60">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 py-8 text-xs text-muted-foreground sm:flex-row">
           <div className="flex items-center gap-2">
-            <img src={hcLogo} alt="" width={20} height={20} className="h-5 w-5 rounded-full" />
+            <img src={hcLogo} alt="" width={22} height={22} className="h-[22px] w-[22px] object-contain" />
             <p>© {new Date().getFullYear()} HC Services Financial. {t.footerRights}</p>
           </div>
           <p>{t.footerTagline}</p>
